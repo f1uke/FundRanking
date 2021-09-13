@@ -2,6 +2,10 @@
 7 day assignment
 
 ## Planning
-  * 1 day 
+  * day 1 
     1. init project
-    1. design ui and analyst requirements
+    2. design ui and analyst requirements 
+  * day 2
+    1. init project architecture
+    2. add third party libraries
+    3. development
