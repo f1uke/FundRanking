@@ -3,18 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		71109F4D26EF5CDF0080083C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F4C26EF5CDF0080083C /* AppDelegate.swift */; };
 		71109F4F26EF5CDF0080083C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F4E26EF5CDF0080083C /* SceneDelegate.swift */; };
-		71109F5126EF5CDF0080083C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F5026EF5CDF0080083C /* ViewController.swift */; };
-		71109F5426EF5CDF0080083C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71109F5226EF5CDF0080083C /* Main.storyboard */; };
+		71109F5126EF5CDF0080083C /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F5026EF5CDF0080083C /* RankingViewController.swift */; };
+		71109F5426EF5CDF0080083C /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71109F5226EF5CDF0080083C /* Ranking.storyboard */; };
 		71109F5626EF5CE10080083C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71109F5526EF5CE10080083C /* Assets.xcassets */; };
 		71109F5926EF5CE10080083C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71109F5726EF5CE10080083C /* LaunchScreen.storyboard */; };
 		71109F6426EF5CE10080083C /* FundRankingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F6326EF5CE10080083C /* FundRankingTests.swift */; };
 		71109F6F26EF5CE10080083C /* FundRankingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F6E26EF5CE10080083C /* FundRankingUITests.swift */; };
+		71109F9026F092630080083C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 71109F8F26F092630080083C /* Alamofire */; };
+		71109F9926F097210080083C /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F9826F097210080083C /* Storyboards.swift */; };
+		71109F9E26F098980080083C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F9D26F098980080083C /* Repository.swift */; };
+		71109FA026F098E30080083C /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109F9F26F098E30080083C /* ApiConfig.swift */; };
+		71109FA326F09BF60080083C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FA226F09BF60080083C /* ApiManager.swift */; };
+		71109FA526F09DA90080083C /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FA426F09DA90080083C /* GenericResponse.swift */; };
+		71109FA826F09F430080083C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FA726F09F430080083C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +45,8 @@
 		71109F4926EF5CDF0080083C /* FundRanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FundRanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71109F4C26EF5CDF0080083C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71109F4E26EF5CDF0080083C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		71109F5026EF5CDF0080083C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		71109F5326EF5CDF0080083C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71109F5026EF5CDF0080083C /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		71109F5326EF5CDF0080083C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Ranking.storyboard; sourceTree = "<group>"; };
 		71109F5526EF5CE10080083C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71109F5826EF5CE10080083C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71109F5A26EF5CE10080083C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,14 @@
 		71109F6A26EF5CE10080083C /* FundRankingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FundRankingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71109F6E26EF5CE10080083C /* FundRankingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRankingUITests.swift; sourceTree = "<group>"; };
 		71109F7026EF5CE10080083C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71109F9226F093E20080083C /* DEV.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DEV.debug.xcconfig; sourceTree = "<group>"; };
+		71109F9726F094CC0080083C /* Prod.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.release.xcconfig; sourceTree = "<group>"; };
+		71109F9826F097210080083C /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		71109F9D26F098980080083C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		71109F9F26F098E30080083C /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		71109FA226F09BF60080083C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		71109FA426F09DA90080083C /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		71109FA726F09F430080083C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71109F9026F092630080083C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +115,13 @@
 		71109F4B26EF5CDF0080083C /* FundRanking */ = {
 			isa = PBXGroup;
 			children = (
-				71109F4C26EF5CDF0080083C /* AppDelegate.swift */,
-				71109F4E26EF5CDF0080083C /* SceneDelegate.swift */,
-				71109F5026EF5CDF0080083C /* ViewController.swift */,
-				71109F5226EF5CDF0080083C /* Main.storyboard */,
+				71109F9126F0934D0080083C /* AppConfigs */,
+				71109F8B26F0915E0080083C /* Apps */,
+				71109FA626F09F2E0080083C /* Utils */,
+				71109F8A26F091310080083C /* Models */,
+				71109F8926F090F60080083C /* Storyboards */,
+				71109F8826F090E30080083C /* Views */,
+				71109F8D26F091F20080083C /* Components */,
 				71109F5526EF5CE10080083C /* Assets.xcassets */,
 				71109F5726EF5CE10080083C /* LaunchScreen.storyboard */,
 				71109F5A26EF5CE10080083C /* Info.plist */,
@@ -128,6 +147,99 @@
 			path = FundRankingUITests;
 			sourceTree = "<group>";
 		};
+		71109F8826F090E30080083C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71109F8C26F091760080083C /* Ranking */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71109F8926F090F60080083C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				71109F5226EF5CDF0080083C /* Ranking.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		71109F8A26F091310080083C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71109F9C26F098730080083C /* Defaults */,
+				71109F9B26F0985D0080083C /* Locals */,
+				71109F9A26F098560080083C /* Remotes */,
+				71109F9D26F098980080083C /* Repository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		71109F8B26F0915E0080083C /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				71109F4C26EF5CDF0080083C /* AppDelegate.swift */,
+				71109F4E26EF5CDF0080083C /* SceneDelegate.swift */,
+				71109F9826F097210080083C /* Storyboards.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		71109F8C26F091760080083C /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				71109F5026EF5CDF0080083C /* RankingViewController.swift */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		71109F8D26F091F20080083C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		71109F9126F0934D0080083C /* AppConfigs */ = {
+			isa = PBXGroup;
+			children = (
+				71109F9226F093E20080083C /* DEV.debug.xcconfig */,
+				71109F9726F094CC0080083C /* Prod.release.xcconfig */,
+			);
+			path = AppConfigs;
+			sourceTree = "<group>";
+		};
+		71109F9A26F098560080083C /* Remotes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remotes;
+			sourceTree = "<group>";
+		};
+		71109F9B26F0985D0080083C /* Locals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Locals;
+			sourceTree = "<group>";
+		};
+		71109F9C26F098730080083C /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				71109F9F26F098E30080083C /* ApiConfig.swift */,
+				71109FA226F09BF60080083C /* ApiManager.swift */,
+				71109FA426F09DA90080083C /* GenericResponse.swift */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+		71109FA626F09F2E0080083C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				71109FA726F09F430080083C /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +256,9 @@
 			dependencies = (
 			);
 			name = FundRanking;
+			packageProductDependencies = (
+				71109F8F26F092630080083C /* Alamofire */,
+			);
 			productName = FundRanking;
 			productReference = 71109F4926EF5CDF0080083C /* FundRanking.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +330,9 @@
 				Base,
 			);
 			mainGroup = 71109F4026EF5CDF0080083C;
+			packageReferences = (
+				71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 71109F4A26EF5CDF0080083C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +351,7 @@
 			files = (
 				71109F5926EF5CE10080083C /* LaunchScreen.storyboard in Resources */,
 				71109F5626EF5CE10080083C /* Assets.xcassets in Resources */,
-				71109F5426EF5CDF0080083C /* Main.storyboard in Resources */,
+				71109F5426EF5CDF0080083C /* Ranking.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +376,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71109F5126EF5CDF0080083C /* ViewController.swift in Sources */,
+				71109F9926F097210080083C /* Storyboards.swift in Sources */,
+				71109F5126EF5CDF0080083C /* RankingViewController.swift in Sources */,
+				71109FA026F098E30080083C /* ApiConfig.swift in Sources */,
+				71109FA326F09BF60080083C /* ApiManager.swift in Sources */,
+				71109FA526F09DA90080083C /* GenericResponse.swift in Sources */,
+				71109F9E26F098980080083C /* Repository.swift in Sources */,
 				71109F4D26EF5CDF0080083C /* AppDelegate.swift in Sources */,
 				71109F4F26EF5CDF0080083C /* SceneDelegate.swift in Sources */,
+				71109FA826F09F430080083C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +420,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		71109F5226EF5CDF0080083C /* Main.storyboard */ = {
+		71109F5226EF5CDF0080083C /* Ranking.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				71109F5326EF5CDF0080083C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Ranking.storyboard;
 			sourceTree = "<group>";
 		};
 		71109F5726EF5CE10080083C /* LaunchScreen.storyboard */ = {
@@ -317,6 +441,7 @@
 /* Begin XCBuildConfiguration section */
 		71109F7126EF5CE10080083C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71109F9226F093E20080083C /* DEV.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -378,6 +503,7 @@
 		};
 		71109F7226EF5CE10080083C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71109F9726F094CC0080083C /* Prod.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -587,6 +713,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71109F8F26F092630080083C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71109F4126EF5CDF0080083C /* Project object */;
 }

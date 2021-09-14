@@ -1,0 +1,12 @@
+//
+//  Prod.release.xcconfig
+//  FundRanking
+//
+//  Created by Sattra on 9/14/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = Ranking
+SERVICE_HOST = https:/$()/storage.googleapis.com/finno-ex-re-v2-static-staging/recruitment-test/
