@@ -16,18 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIR-nN-Z6E">
-                                <rect key="frame" x="187.5" y="437.5" width="39" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPQ-aP-0wE" customClass="UIGradientView" customModule="FundRanking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_1stColor">
+                                        <color key="value" red="0.02798029000947019" green="0.178193947703568" blue="0.1095797479555428" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_2ndColor">
+                                        <color key="value" red="0.027980290009999999" green="0.17819394769999999" blue="0.109579748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzK-AY-fX4">
+                                <rect key="frame" x="176" y="60" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yIR-nN-Z6E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RTk-6G-f3Y"/>
-                            <constraint firstItem="yIR-nN-Z6E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r80-wF-e2d"/>
+                            <constraint firstItem="uzK-AY-fX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9t8-iP-hH8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="ATa-n5-Qe0"/>
+                            <constraint firstAttribute="bottom" secondItem="xPQ-aP-0wE" secondAttribute="bottom" id="AkA-51-CFV"/>
+                            <constraint firstItem="xPQ-aP-0wE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KFB-C7-qxK"/>
+                            <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jkK-hi-8zA"/>
+                            <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5t-3g-tDS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="pXq-0a-CkI"/>
+                            <constraint firstItem="uzK-AY-fX4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sKc-JW-LhO"/>
                         </constraints>
                     </view>
                 </viewController>
