@@ -136,6 +136,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-8M-gSZ">
+                                <rect key="frame" x="0.0" y="208" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="aVd-pq-T4t"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sLp-5I-usK"/>
+                                </connections>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzK-AY-fX4">
                                 <rect key="frame" x="160" y="60" width="94.5" height="29"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
@@ -148,12 +156,16 @@
                         <constraints>
                             <constraint firstItem="Kzs-pz-ehc" firstAttribute="top" secondItem="uzK-AY-fX4" secondAttribute="bottom" constant="14" id="0mL-Yy-4nt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J40-tX-vlo" secondAttribute="trailing" constant="16" id="1VV-2O-jVR"/>
+                            <constraint firstItem="TJE-8M-gSZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Gz-1Q-qoh"/>
                             <constraint firstItem="uzK-AY-fX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9t8-iP-hH8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="ATa-n5-Qe0"/>
                             <constraint firstAttribute="bottom" secondItem="xPQ-aP-0wE" secondAttribute="bottom" id="AkA-51-CFV"/>
+                            <constraint firstItem="TJE-8M-gSZ" firstAttribute="top" secondItem="J40-tX-vlo" secondAttribute="bottom" constant="8" id="BIk-6c-GyA"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KFB-C7-qxK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kzs-pz-ehc" secondAttribute="trailing" constant="16" id="M7T-W5-bzp"/>
+                            <constraint firstAttribute="bottom" secondItem="TJE-8M-gSZ" secondAttribute="bottom" id="egc-Bd-zoi"/>
                             <constraint firstItem="J40-tX-vlo" firstAttribute="top" secondItem="Kzs-pz-ehc" secondAttribute="bottom" constant="13" id="eyd-Zd-8oj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TJE-8M-gSZ" secondAttribute="trailing" id="fYN-gq-dfb"/>
                             <constraint firstItem="J40-tX-vlo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gXu-VL-oUC"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jkK-hi-8zA"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5t-3g-tDS"/>
