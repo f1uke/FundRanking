@@ -25,6 +25,7 @@
 		71109FAE26F1F7100080083C /* Components.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71109FAD26F1F7100080083C /* Components.storyboard */; };
 		71109FB126F1F7B40080083C /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FB026F1F7B40080083C /* UICustomView.swift */; };
 		71109FB326F1F93A0080083C /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FB226F1F93A0080083C /* UIGradientView.swift */; };
+		71109FB626F1FB950080083C /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		71109FAD26F1F7100080083C /* Components.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Components.storyboard; sourceTree = "<group>"; };
 		71109FB026F1F7B40080083C /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		71109FB226F1F93A0080083C /* UIGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
+		71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		71109FB426F1FB320080083C /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71109F5926EF5CE10080083C /* LaunchScreen.storyboard in Resources */,
+				71109FB626F1FB950080083C /* VarelaRound-Regular.ttf in Resources */,
 				71109F5626EF5CE10080083C /* Assets.xcassets in Resources */,
 				71109FAE26F1F7100080083C /* Components.storyboard in Resources */,
 				71109F5426EF5CDF0080083C /* Ranking.storyboard in Resources */,
