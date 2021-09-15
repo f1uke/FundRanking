@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,6 +34,82 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht9-i0-d1F" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                <rect key="frame" x="11" y="102" width="100" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7jw-FW-cdj"/>
+                                    <constraint firstAttribute="height" constant="40" id="XHd-UM-Wzh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aaz-a3-Ans">
+                                <rect key="frame" x="16" y="105" width="382" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-tJ-Fj9">
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                        <state key="normal" title="Day">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOi-5z-Qqg">
+                                        <rect key="frame" x="97.5" y="0.0" width="89.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                        <state key="normal" title="Week">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V8-eF-whW">
+                                        <rect key="frame" x="195" y="0.0" width="89.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                        <state key="normal" title="Month">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ww-Ic-T99">
+                                        <rect key="frame" x="292.5" y="0.0" width="89.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                        <state key="normal" title="Year">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J40-tX-vlo" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                <rect key="frame" x="16" y="155" width="382" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loupe" translatesAutoresizingMaskIntoConstraints="NO" id="SyJ-kf-32t">
+                                        <rect key="frame" x="16" y="18" width="14.5" height="14.5"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-hG-FNA">
+                                        <rect key="frame" x="38.5" y="0.0" width="335.5" height="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kgr-hG-FNA" firstAttribute="centerY" secondItem="J40-tX-vlo" secondAttribute="centerY" id="05j-Al-u4g"/>
+                                    <constraint firstItem="kgr-hG-FNA" firstAttribute="top" secondItem="J40-tX-vlo" secondAttribute="top" id="22x-uF-nKs"/>
+                                    <constraint firstItem="SyJ-kf-32t" firstAttribute="leading" secondItem="J40-tX-vlo" secondAttribute="leading" constant="16" id="27i-rV-4mo"/>
+                                    <constraint firstItem="SyJ-kf-32t" firstAttribute="centerY" secondItem="J40-tX-vlo" secondAttribute="centerY" id="2Cg-fT-fi3"/>
+                                    <constraint firstItem="kgr-hG-FNA" firstAttribute="leading" secondItem="SyJ-kf-32t" secondAttribute="trailing" constant="8" id="VXu-aG-clI"/>
+                                    <constraint firstAttribute="bottom" secondItem="kgr-hG-FNA" secondAttribute="bottom" id="bod-fs-LV1"/>
+                                    <constraint firstAttribute="height" constant="50" id="eLT-8e-BaB"/>
+                                    <constraint firstAttribute="trailing" secondItem="kgr-hG-FNA" secondAttribute="trailing" constant="8" id="xET-w9-Pm9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzK-AY-fX4">
                                 <rect key="frame" x="160" y="60" width="94.5" height="29"/>
                                 <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
@@ -43,12 +120,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aaz-a3-Ans" secondAttribute="trailing" constant="16" id="0jW-xY-H7O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J40-tX-vlo" secondAttribute="trailing" constant="16" id="1VV-2O-jVR"/>
+                            <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerX" secondItem="XpE-tJ-Fj9" secondAttribute="centerX" id="40D-3g-EKY"/>
+                            <constraint firstItem="aaz-a3-Ans" firstAttribute="top" secondItem="uzK-AY-fX4" secondAttribute="bottom" constant="16" id="6yM-DF-QXC"/>
                             <constraint firstItem="uzK-AY-fX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9t8-iP-hH8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="ATa-n5-Qe0"/>
                             <constraint firstAttribute="bottom" secondItem="xPQ-aP-0wE" secondAttribute="bottom" id="AkA-51-CFV"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KFB-C7-qxK"/>
+                            <constraint firstItem="aaz-a3-Ans" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V3J-sw-Sbf"/>
+                            <constraint firstItem="J40-tX-vlo" firstAttribute="top" secondItem="aaz-a3-Ans" secondAttribute="bottom" constant="16" id="cVt-OT-re3"/>
+                            <constraint firstItem="J40-tX-vlo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gXu-VL-oUC"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jkK-hi-8zA"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5t-3g-tDS"/>
+                            <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerY" secondItem="aaz-a3-Ans" secondAttribute="centerY" id="nmH-u5-oSC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="pXq-0a-CkI"/>
                             <constraint firstItem="uzK-AY-fX4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sKc-JW-LhO"/>
                         </constraints>
@@ -56,10 +141,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="95"/>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
         </scene>
     </scenes>
     <resources>
+        <image name="loupe" width="14.5" height="14.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
