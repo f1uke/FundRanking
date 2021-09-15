@@ -26,6 +26,7 @@
 		71109FB126F1F7B40080083C /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FB026F1F7B40080083C /* UICustomView.swift */; };
 		71109FB326F1F93A0080083C /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FB226F1F93A0080083C /* UIGradientView.swift */; };
 		71109FB626F1FB950080083C /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */; };
+		71BC3E7026F207460014FB38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71BC3E6F26F207460014FB38 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71109F9026F092630080083C /* Alamofire in Frameworks */,
+				71BC3E7026F207460014FB38 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +288,7 @@
 			name = FundRanking;
 			packageProductDependencies = (
 				71109F8F26F092630080083C /* Alamofire */,
+				71BC3E6F26F207460014FB38 /* SnapKit */,
 			);
 			productName = FundRanking;
 			productReference = 71109F4926EF5CDF0080083C /* FundRanking.app */;
@@ -360,6 +363,7 @@
 			mainGroup = 71109F4026EF5CDF0080083C;
 			packageReferences = (
 				71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				71BC3E6E26F207460014FB38 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 71109F4A26EF5CDF0080083C /* Products */;
 			projectDirPath = "";
@@ -755,6 +759,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		71BC3E6E26F207460014FB38 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -762,6 +774,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		71BC3E6F26F207460014FB38 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71BC3E6E26F207460014FB38 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

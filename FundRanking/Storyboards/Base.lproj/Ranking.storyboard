@@ -34,54 +34,80 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht9-i0-d1F" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
-                                <rect key="frame" x="11" y="102" width="100" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="7jw-FW-cdj"/>
-                                    <constraint firstAttribute="height" constant="40" id="XHd-UM-Wzh"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aaz-a3-Ans">
-                                <rect key="frame" x="16" y="105" width="382" height="34"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-pz-ehc">
+                                <rect key="frame" x="11" y="103" width="387" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-tJ-Fj9">
-                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="34"/>
-                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
-                                        <state key="normal" title="Day">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOi-5z-Qqg">
-                                        <rect key="frame" x="97.5" y="0.0" width="89.5" height="34"/>
-                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
-                                        <state key="normal" title="Week">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V8-eF-whW">
-                                        <rect key="frame" x="195" y="0.0" width="89.5" height="34"/>
-                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
-                                        <state key="normal" title="Month">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ww-Ic-T99">
-                                        <rect key="frame" x="292.5" y="0.0" width="89.5" height="34"/>
-                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
-                                        <state key="normal" title="Year">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht9-i0-d1F" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                        <rect key="frame" x="-4.5" y="-3" width="100" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="7jw-FW-cdj"/>
+                                            <constraint firstAttribute="height" constant="40" id="XHd-UM-Wzh"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aaz-a3-Ans">
+                                        <rect key="frame" x="0.0" y="0.0" width="387" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-tJ-Fj9">
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Day">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="liV-t3-p9l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOi-5z-Qqg">
+                                                <rect key="frame" x="99" y="0.0" width="90.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Week">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="weekPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7kI-Sh-WWC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V8-eF-whW">
+                                                <rect key="frame" x="197.5" y="0.0" width="91" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Month">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="monthPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2G-OY-5Ja"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ww-Ic-T99">
+                                                <rect key="frame" x="296.5" y="0.0" width="90.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Year">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="yearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBR-BK-J6k"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerX" secondItem="XpE-tJ-Fj9" secondAttribute="centerX" priority="250" id="3Lo-h6-fPC"/>
+                                    <constraint firstItem="aaz-a3-Ans" firstAttribute="top" secondItem="Kzs-pz-ehc" secondAttribute="top" id="HMG-qU-AjS"/>
+                                    <constraint firstAttribute="bottom" secondItem="aaz-a3-Ans" secondAttribute="bottom" id="JIp-oM-RpS"/>
+                                    <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerY" secondItem="aaz-a3-Ans" secondAttribute="centerY" id="QbP-pm-fhi"/>
+                                    <constraint firstAttribute="trailing" secondItem="aaz-a3-Ans" secondAttribute="trailing" id="bcC-M2-JZL"/>
+                                    <constraint firstItem="aaz-a3-Ans" firstAttribute="leading" secondItem="Kzs-pz-ehc" secondAttribute="leading" id="pKk-Pr-30m"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J40-tX-vlo" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
-                                <rect key="frame" x="16" y="155" width="382" height="50"/>
+                                <rect key="frame" x="16" y="150" width="382" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loupe" translatesAutoresizingMaskIntoConstraints="NO" id="SyJ-kf-32t">
                                         <rect key="frame" x="16" y="18" width="14.5" height="14.5"/>
@@ -120,24 +146,30 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aaz-a3-Ans" secondAttribute="trailing" constant="16" id="0jW-xY-H7O"/>
+                            <constraint firstItem="Kzs-pz-ehc" firstAttribute="top" secondItem="uzK-AY-fX4" secondAttribute="bottom" constant="14" id="0mL-Yy-4nt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J40-tX-vlo" secondAttribute="trailing" constant="16" id="1VV-2O-jVR"/>
-                            <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerX" secondItem="XpE-tJ-Fj9" secondAttribute="centerX" id="40D-3g-EKY"/>
-                            <constraint firstItem="aaz-a3-Ans" firstAttribute="top" secondItem="uzK-AY-fX4" secondAttribute="bottom" constant="16" id="6yM-DF-QXC"/>
                             <constraint firstItem="uzK-AY-fX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="9t8-iP-hH8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="ATa-n5-Qe0"/>
                             <constraint firstAttribute="bottom" secondItem="xPQ-aP-0wE" secondAttribute="bottom" id="AkA-51-CFV"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KFB-C7-qxK"/>
-                            <constraint firstItem="aaz-a3-Ans" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V3J-sw-Sbf"/>
-                            <constraint firstItem="J40-tX-vlo" firstAttribute="top" secondItem="aaz-a3-Ans" secondAttribute="bottom" constant="16" id="cVt-OT-re3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kzs-pz-ehc" secondAttribute="trailing" constant="16" id="M7T-W5-bzp"/>
+                            <constraint firstItem="J40-tX-vlo" firstAttribute="top" secondItem="Kzs-pz-ehc" secondAttribute="bottom" constant="13" id="eyd-Zd-8oj"/>
                             <constraint firstItem="J40-tX-vlo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gXu-VL-oUC"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jkK-hi-8zA"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5t-3g-tDS"/>
-                            <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerY" secondItem="aaz-a3-Ans" secondAttribute="centerY" id="nmH-u5-oSC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="pXq-0a-CkI"/>
                             <constraint firstItem="uzK-AY-fX4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sKc-JW-LhO"/>
+                            <constraint firstItem="Kzs-pz-ehc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="vrP-AY-0iV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dayBtn" destination="XpE-tJ-Fj9" id="zPE-sd-nbo"/>
+                        <outlet property="highlightBtnBg" destination="Ht9-i0-d1F" id="Nhi-sM-Oe1"/>
+                        <outlet property="monthBtn" destination="4V8-eF-whW" id="9Cj-ui-wBo"/>
+                        <outlet property="segmentView" destination="Kzs-pz-ehc" id="XBi-aU-Nbe"/>
+                        <outlet property="weekBtn" destination="eOi-5z-Qqg" id="izv-9W-cFC"/>
+                        <outlet property="yearBtn" destination="9ww-Ic-T99" id="yQz-db-3Pd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
