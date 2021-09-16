@@ -27,6 +27,13 @@
 		71109FB326F1F93A0080083C /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FB226F1F93A0080083C /* UIGradientView.swift */; };
 		71109FB626F1FB950080083C /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */; };
 		7140D95826F348D200A39D3C /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D95726F348D200A39D3C /* RankingCell.swift */; };
+		7140D95C26F35E3700A39D3C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7140D95B26F35E3700A39D3C /* Lottie */; };
+		7140D96526F3635100A39D3C /* 57993-win-crown-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */; };
+		7140D96726F3638900A39D3C /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D96626F3638900A39D3C /* AppUtils.swift */; };
+		7140D96826F3660C00A39D3C /* 57993-win-crown-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */; };
+		7140D96926F3660C00A39D3C /* 57993-win-crown-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */; };
+		7140D96C26F366FD00A39D3C /* ProgressLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7140D96A26F366FD00A39D3C /* ProgressLoading.xib */; };
+		7140D96D26F366FD00A39D3C /* ProgressLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */; };
 		71BC3E7026F207460014FB38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71BC3E6F26F207460014FB38 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +82,10 @@
 		71109FB226F1F93A0080083C /* UIGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
 		71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
 		7140D95726F348D200A39D3C /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
+		7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "57993-win-crown-animation.json"; sourceTree = "<group>"; };
+		7140D96626F3638900A39D3C /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		7140D96A26F366FD00A39D3C /* ProgressLoading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressLoading.xib; sourceTree = "<group>"; };
+		7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +95,7 @@
 			files = (
 				71109F9026F092630080083C /* Alamofire in Frameworks */,
 				71BC3E7026F207460014FB38 /* SnapKit in Frameworks */,
+				7140D95C26F35E3700A39D3C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +139,7 @@
 		71109F4B26EF5CDF0080083C /* FundRanking */ = {
 			isa = PBXGroup;
 			children = (
+				7140D96326F362F800A39D3C /* Animations */,
 				71109F9126F0934D0080083C /* AppConfigs */,
 				71109F8B26F0915E0080083C /* Apps */,
 				71109FA626F09F2E0080083C /* Utils */,
@@ -210,6 +223,7 @@
 		71109F8D26F091F20080083C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7140D95E26F35E7A00A39D3C /* ProgressLoading */,
 				71109FAF26F1F7A70080083C /* UIViews */,
 			);
 			path = Components;
@@ -252,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				71109FA726F09F430080083C /* Constants.swift */,
+				7140D96626F3638900A39D3C /* AppUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -281,6 +296,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7140D95E26F35E7A00A39D3C /* ProgressLoading */ = {
+			isa = PBXGroup;
+			children = (
+				7140D96A26F366FD00A39D3C /* ProgressLoading.xib */,
+				7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */,
+			);
+			path = ProgressLoading;
+			sourceTree = "<group>";
+		};
+		7140D96326F362F800A39D3C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,6 +332,7 @@
 			packageProductDependencies = (
 				71109F8F26F092630080083C /* Alamofire */,
 				71BC3E6F26F207460014FB38 /* SnapKit */,
+				7140D95B26F35E3700A39D3C /* Lottie */,
 			);
 			productName = FundRanking;
 			productReference = 71109F4926EF5CDF0080083C /* FundRanking.app */;
@@ -375,6 +408,7 @@
 			packageReferences = (
 				71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				71BC3E6E26F207460014FB38 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7140D95A26F35E3700A39D3C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 71109F4A26EF5CDF0080083C /* Products */;
 			projectDirPath = "";
@@ -395,7 +429,9 @@
 				71109F5926EF5CE10080083C /* LaunchScreen.storyboard in Resources */,
 				71109FB626F1FB950080083C /* VarelaRound-Regular.ttf in Resources */,
 				71109F5626EF5CE10080083C /* Assets.xcassets in Resources */,
+				7140D96526F3635100A39D3C /* 57993-win-crown-animation.json in Resources */,
 				71109FAE26F1F7100080083C /* Components.storyboard in Resources */,
+				7140D96C26F366FD00A39D3C /* ProgressLoading.xib in Resources */,
 				71109F5426EF5CDF0080083C /* Ranking.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7140D96826F3660C00A39D3C /* 57993-win-crown-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7140D96926F3660C00A39D3C /* 57993-win-crown-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +463,13 @@
 				71109F5126EF5CDF0080083C /* RankingViewController.swift in Sources */,
 				7140D95826F348D200A39D3C /* RankingCell.swift in Sources */,
 				71109FA026F098E30080083C /* ApiConfig.swift in Sources */,
+				7140D96726F3638900A39D3C /* AppUtils.swift in Sources */,
 				71109FA326F09BF60080083C /* ApiManager.swift in Sources */,
 				71109FA526F09DA90080083C /* GenericResponse.swift in Sources */,
 				71109F9E26F098980080083C /* Repository.swift in Sources */,
 				71109F4D26EF5CDF0080083C /* AppDelegate.swift in Sources */,
 				71109FB326F1F93A0080083C /* UIGradientView.swift in Sources */,
+				7140D96D26F366FD00A39D3C /* ProgressLoadingView.swift in Sources */,
 				71109FB126F1F7B40080083C /* UICustomView.swift in Sources */,
 				71109F4F26EF5CDF0080083C /* SceneDelegate.swift in Sources */,
 				71109FA826F09F430080083C /* Constants.swift in Sources */,
@@ -539,7 +579,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -595,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -619,7 +659,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = f1uke.assignment.7day.FundRanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -637,7 +677,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = f1uke.assignment.7day.FundRanking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -771,6 +811,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		7140D95A26F35E3700A39D3C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
 		71BC3E6E26F207460014FB38 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -786,6 +834,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		7140D95B26F35E3700A39D3C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7140D95A26F35E3700A39D3C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		71BC3E6F26F207460014FB38 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

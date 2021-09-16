@@ -69,6 +69,7 @@ class RankingViewController: UIViewController {
     
     @IBAction func yearPressed(_ sender: Any) {
         switchSegment(selected: "year")
+        AppUtils.presentLoading()
     }
 }
 

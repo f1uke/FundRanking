@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressLoadingView" customModule="FundRanking" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="CcS-CA-bYH" id="x6u-8y-sJ2"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="lde-8l-lNR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ProgressLoadingView" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAl-yE-JKM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.44779791800000002" colorSpace="custom" customColorSpace="displayP3"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7C-YY-X5T" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                    <rect key="frame" x="132" y="373" width="150" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="VLh-e4-Qu4"/>
+                        <constraint firstAttribute="height" constant="150" id="hhz-kZ-Prm"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="75"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-CA-bYH" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="157" y="398" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="6ZR-Ge-3pS"/>
+                        <constraint firstAttribute="width" constant="100" id="irc-pU-Ue3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KAl-yE-JKM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7pu-xo-n8E"/>
+                <constraint firstItem="F7C-YY-X5T" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8BT-5P-4Ia"/>
+                <constraint firstItem="KAl-yE-JKM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="I7V-0y-WKs"/>
+                <constraint firstItem="CcS-CA-bYH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MKq-Yg-HRV"/>
+                <constraint firstItem="CcS-CA-bYH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Z6Z-di-29M"/>
+                <constraint firstItem="F7C-YY-X5T" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fCD-hV-xlx"/>
+                <constraint firstAttribute="bottom" secondItem="KAl-yE-JKM" secondAttribute="bottom" id="fsZ-Bt-pFG"/>
+                <constraint firstAttribute="trailing" secondItem="KAl-yE-JKM" secondAttribute="trailing" id="ywa-4W-iq4"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
+        </view>
+    </objects>
+</document>
