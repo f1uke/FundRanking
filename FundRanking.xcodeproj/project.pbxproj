@@ -26,6 +26,7 @@
 		71109FB126F1F7B40080083C /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FB026F1F7B40080083C /* UICustomView.swift */; };
 		71109FB326F1F93A0080083C /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71109FB226F1F93A0080083C /* UIGradientView.swift */; };
 		71109FB626F1FB950080083C /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */; };
+		7140D95826F348D200A39D3C /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D95726F348D200A39D3C /* RankingCell.swift */; };
 		71BC3E7026F207460014FB38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71BC3E6F26F207460014FB38 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		71109FB026F1F7B40080083C /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		71109FB226F1F93A0080083C /* UIGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
 		71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
+		7140D95726F348D200A39D3C /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		71109F8C26F091760080083C /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
+				7140D95626F348B100A39D3C /* Cell */,
 				71109F5026EF5CDF0080083C /* RankingViewController.swift */,
 			);
 			path = Ranking;
@@ -268,6 +271,14 @@
 				71109FB526F1FB950080083C /* VarelaRound-Regular.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		7140D95626F348B100A39D3C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7140D95726F348D200A39D3C /* RankingCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +423,7 @@
 			files = (
 				71109F9926F097210080083C /* Storyboards.swift in Sources */,
 				71109F5126EF5CDF0080083C /* RankingViewController.swift in Sources */,
+				7140D95826F348D200A39D3C /* RankingCell.swift in Sources */,
 				71109FA026F098E30080083C /* ApiConfig.swift in Sources */,
 				71109FA326F09BF60080083C /* ApiManager.swift in Sources */,
 				71109FA526F09DA90080083C /* GenericResponse.swift in Sources */,

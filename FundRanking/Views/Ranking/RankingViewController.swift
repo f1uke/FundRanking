@@ -10,6 +10,7 @@ import SnapKit
 
 class RankingViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentView: UIView!
     @IBOutlet weak var dayBtn: UIButton!
     @IBOutlet weak var weekBtn: UIButton!
@@ -77,7 +78,9 @@ extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: RankingCell.cellId) as! RankingCell
+        
+        return cell
     }
     
     
