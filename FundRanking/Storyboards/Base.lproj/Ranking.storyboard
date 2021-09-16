@@ -136,17 +136,118 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-8M-gSZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-8M-gSZ">
                                 <rect key="frame" x="0.0" y="208" width="414" height="688"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RankingCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RankingCell" id="Qce-Dy-Sb1" customClass="RankingCell" customModule="FundRanking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qce-Dy-Sb1" id="O8M-0P-pHc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMp-FN-zMC" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                                    <rect key="frame" x="50" y="8" width="348" height="70"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8Z-L2-aoR" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                                            <rect key="frame" x="250" y="15" width="80" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-uD-p2G">
+                                                                    <rect key="frame" x="8" y="5.5" width="13.5" height="29"/>
+                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="89.60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-1U-Gfj">
+                                                                    <rect key="frame" x="25.5" y="10.5" width="46.5" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="16"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.54754463312835921" green="0.96530182828608246" blue="0.77910391396662892" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="2oc-0g-p75"/>
+                                                                <constraint firstAttribute="trailing" secondItem="eKR-1U-Gfj" secondAttribute="trailing" constant="8" id="DcW-U0-r2r"/>
+                                                                <constraint firstAttribute="width" constant="80" id="JRn-E7-dfv"/>
+                                                                <constraint firstItem="oaN-uD-p2G" firstAttribute="leading" secondItem="K8Z-L2-aoR" secondAttribute="leading" constant="8" id="OOQ-XZ-qkQ"/>
+                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="top" secondItem="K8Z-L2-aoR" secondAttribute="top" constant="10.5" id="Rsb-4m-Zfk"/>
+                                                                <constraint firstItem="oaN-uD-p2G" firstAttribute="centerY" secondItem="K8Z-L2-aoR" secondAttribute="centerY" id="jNA-On-qeb"/>
+                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="centerY" secondItem="K8Z-L2-aoR" secondAttribute="centerY" id="m0v-Fa-fBR"/>
+                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="leading" secondItem="oaN-uD-p2G" secondAttribute="trailing" constant="4" id="ndH-u2-dch"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="PRINCIPAL VNEQ-A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElC-vy-8jW">
+                                                            <rect key="frame" x="18" y="25.5" width="156" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15.11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-iK-FLo">
+                                                            <rect key="frame" x="182" y="23" width="60" height="24"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="10 Feb 2014" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-Q7-bef">
+                                                            <rect key="frame" x="253" y="56.5" width="61" height="12.5"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Last Update:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNw-23-PZR">
+                                                            <rect key="frame" x="188.5" y="56.5" width="60.5" height="12.5"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="K8Z-L2-aoR" firstAttribute="leading" secondItem="kYP-iK-FLo" secondAttribute="trailing" constant="8" id="5My-yp-uMI"/>
+                                                        <constraint firstItem="K8Z-L2-aoR" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="9xC-Kl-JPG"/>
+                                                        <constraint firstItem="ElC-vy-8jW" firstAttribute="leading" secondItem="AMp-FN-zMC" secondAttribute="leading" constant="18" id="Fe0-e4-aUd"/>
+                                                        <constraint firstItem="LNw-23-PZR" firstAttribute="centerY" secondItem="a2v-Q7-bef" secondAttribute="centerY" id="H2e-0o-wdd"/>
+                                                        <constraint firstAttribute="height" constant="70" id="TOl-zx-l1d"/>
+                                                        <constraint firstAttribute="bottom" secondItem="a2v-Q7-bef" secondAttribute="bottom" constant="1" id="WKI-gI-Ce7"/>
+                                                        <constraint firstItem="a2v-Q7-bef" firstAttribute="trailing" secondItem="K8Z-L2-aoR" secondAttribute="trailing" constant="-16" id="ZGN-Mq-75d"/>
+                                                        <constraint firstItem="LNw-23-PZR" firstAttribute="trailing" secondItem="a2v-Q7-bef" secondAttribute="leading" constant="-4" id="ZLi-YZ-Wyp"/>
+                                                        <constraint firstItem="ElC-vy-8jW" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="d5l-1z-W9n"/>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="dG0-ri-8j0"/>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="top" secondItem="AMp-FN-zMC" secondAttribute="top" constant="23" id="eaU-Bi-F8A"/>
+                                                        <constraint firstAttribute="trailing" secondItem="K8Z-L2-aoR" secondAttribute="trailing" constant="18" id="liV-wu-BVO"/>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="leading" secondItem="ElC-vy-8jW" secondAttribute="trailing" constant="8" id="sXu-HY-aPC"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="35"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-rs-2uf">
+                                                    <rect key="frame" x="10" y="31" width="40" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V7a-rs-2uf" firstAttribute="centerY" secondItem="O8M-0P-pHc" secondAttribute="centerY" id="37n-Oc-FT8"/>
+                                                <constraint firstItem="V7a-rs-2uf" firstAttribute="leading" secondItem="O8M-0P-pHc" secondAttribute="leading" constant="10" id="8kh-u3-kF2"/>
+                                                <constraint firstItem="AMp-FN-zMC" firstAttribute="leading" secondItem="O8M-0P-pHc" secondAttribute="leading" constant="50" id="MIp-m8-yx3"/>
+                                                <constraint firstAttribute="bottom" secondItem="AMp-FN-zMC" secondAttribute="bottom" constant="8" id="PVD-h0-jKk"/>
+                                                <constraint firstItem="AMp-FN-zMC" firstAttribute="leading" secondItem="V7a-rs-2uf" secondAttribute="trailing" id="a2N-eb-Iwl"/>
+                                                <constraint firstAttribute="trailing" secondItem="AMp-FN-zMC" secondAttribute="trailing" constant="16" id="fjG-6I-SMg"/>
+                                                <constraint firstItem="AMp-FN-zMC" firstAttribute="top" secondItem="O8M-0P-pHc" secondAttribute="top" constant="8" id="jAU-LD-umE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
