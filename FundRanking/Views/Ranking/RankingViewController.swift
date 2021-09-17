@@ -36,6 +36,7 @@ class RankingViewController: UIViewController {
         })
     }
     
+    //present error dialog when service error
     private func onErrorResponse(_ message: String){
         
     }
