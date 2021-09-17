@@ -52,10 +52,9 @@ class RankingViewController: UIViewController {
     
     //present error dialog when service error
     private func onErrorResponse(_ message: String) {
-        AppUtils.dismissLoading {
-            
-        }
-        
+        AppUtils.dismissLoading()
+        let errorDialog = DialogErrorViewController.initial(message: message)
+        self.present(errorDialog, animated: true)
     }
     
     //change highLightBg position with animation

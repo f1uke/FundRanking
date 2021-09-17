@@ -2,31 +2,66 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VarelaRound-Regular.ttf">
+            <string>VarelaRound-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Dialog Error View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DialogErrorViewController" id="Y6W-OH-hqX" customClass="DialogErrorViewController" customModule="FundRanking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKx-ey-IhO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQf-CE-dDF" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="132" y="378" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="FJg-C9-e9f"/>
+                                    <constraint firstAttribute="height" constant="150" id="QaL-Qp-Tx6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errMessage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IL-xi-Dmf">
+                                <rect key="frame" x="16" y="546" width="382" height="29"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zKx-ey-IhO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4Sl-QI-2dQ"/>
+                            <constraint firstAttribute="bottom" secondItem="zKx-ey-IhO" secondAttribute="bottom" id="5zX-Ex-lXn"/>
+                            <constraint firstItem="8IL-xi-Dmf" firstAttribute="top" secondItem="GQf-CE-dDF" secondAttribute="bottom" constant="18" id="FJb-Qj-YEC"/>
+                            <constraint firstItem="GQf-CE-dDF" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="NPP-xW-lAy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8IL-xi-Dmf" secondAttribute="trailing" constant="16" id="VOZ-hJ-lbH"/>
+                            <constraint firstItem="8IL-xi-Dmf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ZnA-8x-LaN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zKx-ey-IhO" secondAttribute="trailing" id="oyC-WQ-xkP"/>
+                            <constraint firstItem="zKx-ey-IhO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="q7B-5c-30t"/>
+                            <constraint firstItem="GQf-CE-dDF" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="uZe-gz-NRg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="GQf-CE-dDF" id="Fn5-NN-WLz"/>
+                        <outlet property="errorMessage" destination="8IL-xi-Dmf" id="7af-b9-IMs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="97" y="94"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

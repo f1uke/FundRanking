@@ -15,4 +15,9 @@ class Storyboards {
         static let rankingVC = "RankingViewController"
     }
     
+    enum components {
+        static let storyboard = UIStoryboard(name: "Components", bundle: nil)
+        static let dialogErrorVC = "DialogErrorViewController"
+    }
+    
 }
