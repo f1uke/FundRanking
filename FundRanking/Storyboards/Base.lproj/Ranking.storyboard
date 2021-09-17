@@ -108,13 +108,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J40-tX-vlo" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
-                                <rect key="frame" x="16" y="165" width="382" height="50"/>
+                                <rect key="frame" x="16" y="165" width="382" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loupe" translatesAutoresizingMaskIntoConstraints="NO" id="SyJ-kf-32t">
-                                        <rect key="frame" x="16" y="18" width="14.5" height="14.5"/>
+                                        <rect key="frame" x="16" y="13" width="14.5" height="14.5"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-hG-FNA">
-                                        <rect key="frame" x="38.5" y="0.0" width="335.5" height="50"/>
+                                        <rect key="frame" x="38.5" y="0.0" width="335.5" height="40"/>
                                         <color key="tintColor" red="0.44959866999999998" green="0.96800953150000002" blue="0.71761530640000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="textColor" red="0.44959866999999998" green="0.96800953150000002" blue="0.71761530640000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
@@ -132,7 +132,7 @@
                                     <constraint firstItem="SyJ-kf-32t" firstAttribute="centerY" secondItem="J40-tX-vlo" secondAttribute="centerY" id="2Cg-fT-fi3"/>
                                     <constraint firstItem="kgr-hG-FNA" firstAttribute="leading" secondItem="SyJ-kf-32t" secondAttribute="trailing" constant="8" id="VXu-aG-clI"/>
                                     <constraint firstAttribute="bottom" secondItem="kgr-hG-FNA" secondAttribute="bottom" id="bod-fs-LV1"/>
-                                    <constraint firstAttribute="height" constant="50" id="eLT-8e-BaB"/>
+                                    <constraint firstAttribute="height" constant="40" id="eLT-8e-BaB"/>
                                     <constraint firstAttribute="trailing" secondItem="kgr-hG-FNA" secondAttribute="trailing" constant="8" id="xET-w9-Pm9"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -142,7 +142,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-8M-gSZ">
-                                <rect key="frame" x="0.0" y="223" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="213" width="414" height="683"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RankingCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RankingCell" id="Qce-Dy-Sb1" customClass="RankingCell" customModule="FundRanking" customModuleProvider="target">
