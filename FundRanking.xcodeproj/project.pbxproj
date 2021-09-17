@@ -34,6 +34,7 @@
 		7140D96926F3660C00A39D3C /* 57993-win-crown-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */; };
 		7140D96C26F366FD00A39D3C /* ProgressLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7140D96A26F366FD00A39D3C /* ProgressLoading.xib */; };
 		7140D96D26F366FD00A39D3C /* ProgressLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */; };
+		7140D97326F4AACA00A39D3C /* FundInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D97226F4AACA00A39D3C /* FundInfo.swift */; };
 		71BC3E7026F207460014FB38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71BC3E6F26F207460014FB38 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		7140D96626F3638900A39D3C /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		7140D96A26F366FD00A39D3C /* ProgressLoading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressLoading.xib; sourceTree = "<group>"; };
 		7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
+		7140D97226F4AACA00A39D3C /* FundInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +195,6 @@
 		71109F8A26F091310080083C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				71109F9C26F098730080083C /* Defaults */,
 				71109F9B26F0985D0080083C /* Locals */,
 				71109F9A26F098560080083C /* Remotes */,
 				71109F9D26F098980080083C /* Repository.swift */,
@@ -241,6 +242,8 @@
 		71109F9A26F098560080083C /* Remotes */ = {
 			isa = PBXGroup;
 			children = (
+				7140D97126F4AAA600A39D3C /* Ranking */,
+				71109F9C26F098730080083C /* Defaults */,
 			);
 			path = Remotes;
 			sourceTree = "<group>";
@@ -311,6 +314,14 @@
 				7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		7140D97126F4AAA600A39D3C /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				7140D97226F4AACA00A39D3C /* FundInfo.swift */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +477,7 @@
 				7140D96726F3638900A39D3C /* AppUtils.swift in Sources */,
 				71109FA326F09BF60080083C /* ApiManager.swift in Sources */,
 				71109FA526F09DA90080083C /* GenericResponse.swift in Sources */,
+				7140D97326F4AACA00A39D3C /* FundInfo.swift in Sources */,
 				71109F9E26F098980080083C /* Repository.swift in Sources */,
 				71109F4D26EF5CDF0080083C /* AppDelegate.swift in Sources */,
 				71109FB326F1F93A0080083C /* UIGradientView.swift in Sources */,
