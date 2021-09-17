@@ -16,31 +16,40 @@ class RankingViewModel {
     let onErrorResponse: ((String) -> Void)?
     
     var fundInfos: [FundInfo]?
+    var tempFundInfos: [FundInfo]?
     
     func getFundRankingDay(onSuccess: ( () -> Void )?) {
         Repository.getFundRankingDay(onComplete: { datas in
-            self.fundInfos = self.sortRanking(datas)
+            let sortedData = self.sortRanking(datas)
+            self.fundInfos = sortedData
+            self.tempFundInfos = sortedData
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
     
     func getFundRankingWeek(onSuccess: ( () -> Void )?) {
         Repository.getFundRankingWeek(onComplete: { datas in
-            self.fundInfos = self.sortRanking(datas)
+            let sortedData = self.sortRanking(datas)
+            self.fundInfos = sortedData
+            self.tempFundInfos = sortedData
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
     
     func getFundRankingMonth(onSuccess: ( () -> Void )?) {
         Repository.getFundRankingMonth(onComplete: { datas in
-            self.fundInfos = self.sortRanking(datas)
+            let sortedData = self.sortRanking(datas)
+            self.fundInfos = sortedData
+            self.tempFundInfos = sortedData
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
     
     func getFundRankingYear(onSuccess: ( () -> Void )?) {
         Repository.getFundRankingYear(onComplete: { datas in
-            self.fundInfos = self.sortRanking(datas)
+            let sortedData = self.sortRanking(datas)
+            self.fundInfos = sortedData
+            self.tempFundInfos = sortedData
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }

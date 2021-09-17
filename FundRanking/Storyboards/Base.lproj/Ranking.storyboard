@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -118,6 +119,9 @@
                                         <color key="textColor" red="0.44959866999999998" green="0.96800953150000002" blue="0.71761530640000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="searchEditChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="p6D-dJ-hgm"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -321,6 +325,7 @@
                         <outlet property="dayBtn" destination="XpE-tJ-Fj9" id="zPE-sd-nbo"/>
                         <outlet property="highlightBtnBg" destination="Ht9-i0-d1F" id="Nhi-sM-Oe1"/>
                         <outlet property="monthBtn" destination="4V8-eF-whW" id="9Cj-ui-wBo"/>
+                        <outlet property="searchEdt" destination="kgr-hG-FNA" id="6kP-rc-hHM"/>
                         <outlet property="segmentView" destination="Kzs-pz-ehc" id="XBi-aU-Nbe"/>
                         <outlet property="tableView" destination="TJE-8M-gSZ" id="hGV-S9-8fU"/>
                         <outlet property="weekBtn" destination="eOi-5z-Qqg" id="izv-9W-cFC"/>

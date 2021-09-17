@@ -11,6 +11,7 @@ import SnapKit
 class RankingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchEdt: UITextField!
     @IBOutlet weak var segmentView: UIView!
     @IBOutlet weak var dayBtn: UIButton!
     @IBOutlet weak var weekBtn: UIButton!
@@ -37,13 +38,17 @@ class RankingViewController: UIViewController {
     }
     
     //present error dialog when service error
-    private func onErrorResponse(_ message: String){
+    private func onErrorResponse(_ message: String) {
+        AppUtils.dismissLoading {
+            
+        }
         
     }
     
     //change highLightBg position with animation
     //use snapKit to make it easy to change constraints
     private func switchSegment(selected: String) {
+        clearSearchEdt()
         switch selected {
         case "day":
             self.highlightBtnBg.snp.remakeConstraints { (make) in
@@ -71,6 +76,11 @@ class RankingViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.segmentView.layoutIfNeeded()
         }
+    }
+    
+    private func clearSearchEdt() {
+        searchEdt.text = nil
+        view.endEditing(true)
     }
     
     @IBAction func dayPressed(_ sender: Any) {
@@ -108,11 +118,21 @@ class RankingViewController: UIViewController {
             AppUtils.dismissLoading()
         })
     }
+    @IBAction func searchEditChanged(_ sender: Any) {
+        if searchEdt.text.isNotNilOrEmpty {
+            self.viewModel.tempFundInfos = self.viewModel.fundInfos?.filter({
+                $0.thailandFundCode!.uppercased().isCompose(of: searchEdt.text!.uppercased())
+            })
+        }else {
+            self.viewModel.tempFundInfos = self.viewModel.fundInfos
+        }
+        tableView.reloadData()
+    }
 }
 
 extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.fundInfos?.count ?? 0
+        viewModel.tempFundInfos?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

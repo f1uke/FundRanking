@@ -58,3 +58,33 @@ class AppUtils {
     }
     
 }
+
+extension String{
+    
+    func isCompose(of thaiWord: String) -> Bool {
+        return self.range(of: thaiWord, options: .literal) != nil ? true : false
+    }
+    
+}
+
+extension Optional where Wrapped == String {
+    var string: String? {
+        return self == nil ? nil : "\(self!)"
+    }
+    
+    var isNotNilOrEmpty: Bool {
+        return self != nil && self != ""
+    }
+    
+    var isNilOrEmpty: Bool {
+        return self == nil || self == ""
+    }
+    
+    var int: Int? {
+        return self.isNilOrEmpty ? nil : Int(self!)
+    }
+    
+    var double: Double? {
+        return self.isNilOrEmpty ? nil : Double(self!)
+    }
+}
