@@ -85,7 +85,7 @@ class RankingViewController: UIViewController {
     @IBAction func weekPressed(_ sender: Any) {
         switchSegment(selected: "week")
         AppUtils.presentLoading()
-        viewModel.getFundRankingDay(onSuccess: {
+        viewModel.getFundRankingWeek(onSuccess: {
             self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
@@ -94,7 +94,7 @@ class RankingViewController: UIViewController {
     @IBAction func monthPressed(_ sender: Any) {
         switchSegment(selected: "month")
         AppUtils.presentLoading()
-        viewModel.getFundRankingDay(onSuccess: {
+        viewModel.getFundRankingMonth(onSuccess: {
             self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
@@ -103,7 +103,7 @@ class RankingViewController: UIViewController {
     @IBAction func yearPressed(_ sender: Any) {
         switchSegment(selected: "year")
         AppUtils.presentLoading()
-        viewModel.getFundRankingDay(onSuccess: {
+        viewModel.getFundRankingYear(onSuccess: {
             self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
@@ -117,6 +117,7 @@ extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: RankingCell.cellId) as! RankingCell
+        cell.setupView(fundInfo: viewModel.fundInfos![indexPath.row])
         
         return cell
     }

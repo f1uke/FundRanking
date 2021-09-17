@@ -43,4 +43,18 @@ class AppUtils {
         }
     }
     
+    class func dateToString(date: Date, pattern: PatternDateFormatter = .timestamp, locale: Locale = LocaleDateTime.en) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = locale
+        dateFormatter.dateFormat = pattern.rawValue
+        return dateFormatter.string(from: date)
+    }
+    
+    class func stringToDate(dateString: String, pattern: PatternDateFormatter = .timestamp, locale: Locale = LocaleDateTime.en) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = locale
+        dateFormatter.dateFormat = pattern.rawValue
+        return dateFormatter.date(from: dateString)
+    }
+    
 }

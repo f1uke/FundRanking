@@ -17,14 +17,6 @@ class Messages {
 enum PatternDateFormatter: String {
     case dmy = "dd/MM/yyyy"
     case timestamp = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-    case timestampDisplay = "dd/MM/yyyy HH:mm"
-    case fullDateTime = "EEE, d MMM yyyy HH:mm:ss Z"
-    case time = "HH:mm"
-    case timeWithOutSection = "HH:mm:ss"
-    case headerMonth = "MMMM yyyy"
-    case fullShortDate = "EEEE d MMMM yyyy"
-    case shortDate = "d MMMM yyyy"
-    case shortMonthYear = "MMM yy"
 }
 
 enum LocaleDateTime {

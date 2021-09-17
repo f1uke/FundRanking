@@ -50,7 +50,11 @@ class RankingViewModel {
             return []
         }
         
-        let fundInfosSorted = fundInfos?.sorted(by: { $0.avgReturn! >= $1.avgReturn! })
+        var fundInfosSorted = fundInfos?.sorted(by: { $0.avgReturn! >= $1.avgReturn! })
+        
+        for (index, _) in fundInfosSorted!.enumerated() {
+            fundInfosSorted![index].rank = index + 1
+        }
         
         return fundInfosSorted ?? []
     }

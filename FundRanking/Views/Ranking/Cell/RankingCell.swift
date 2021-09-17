@@ -25,5 +25,27 @@ class RankingCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func setupView(fundInfo: FundInfo) {
+        rank.text = "\(fundInfo.rank ?? 0)"
+        name.text = fundInfo.thailandFundCode
+        price.text = String(format: "%.4f", fundInfo.nav!)
+        updateDate.text = AppUtils.dateToString(date: fundInfo.navDate!, pattern: .dmy)
+        
+        if fundInfo.avgReturn! > 0 {
+            navAvgBG.backgroundColor = #colorLiteral(red: 0.3359633386, green: 0.8843305707, blue: 0.7025995851, alpha: 1)
+            plusNavAvg.text = "+"
+        } else {
+            navAvgBG.backgroundColor = #colorLiteral(red: 0.9705815911, green: 0.5238886476, blue: 0.4260551333, alpha: 1)
+            plusNavAvg.text = "-"
+        }
+        navAvg.text = String(format: "%.2f", abs(fundInfo.avgReturn!))
+        
+        if fundInfo.rank == 1 {
+            crownImage.isHidden = false
+        } else {
+            crownImage.isHidden = true
+        }
+    }
 
 }
