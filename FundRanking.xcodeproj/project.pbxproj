@@ -36,6 +36,7 @@
 		7140D96D26F366FD00A39D3C /* ProgressLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */; };
 		7140D97326F4AACA00A39D3C /* FundInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D97226F4AACA00A39D3C /* FundInfo.swift */; };
 		7140D97626F4B3E500A39D3C /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D97526F4B3E500A39D3C /* RankingViewModel.swift */; };
+		7140D97826F4CE2D00A39D3C /* 21192-premium-gold.json in Resources */ = {isa = PBXBuildFile; fileRef = 7140D97726F4CE2D00A39D3C /* 21192-premium-gold.json */; };
 		71BC3E7026F207460014FB38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71BC3E6F26F207460014FB38 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
 		7140D97226F4AACA00A39D3C /* FundInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundInfo.swift; sourceTree = "<group>"; };
 		7140D97526F4B3E500A39D3C /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		7140D97726F4CE2D00A39D3C /* 21192-premium-gold.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "21192-premium-gold.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 		7140D96326F362F800A39D3C /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				7140D97726F4CE2D00A39D3C /* 21192-premium-gold.json */,
 				7140D96426F3635100A39D3C /* 57993-win-crown-animation.json */,
 			);
 			path = Animations;
@@ -445,6 +448,7 @@
 				71109F5626EF5CE10080083C /* Assets.xcassets in Resources */,
 				7140D96526F3635100A39D3C /* 57993-win-crown-animation.json in Resources */,
 				71109FAE26F1F7100080083C /* Components.storyboard in Resources */,
+				7140D97826F4CE2D00A39D3C /* 21192-premium-gold.json in Resources */,
 				7140D96C26F366FD00A39D3C /* ProgressLoading.xib in Resources */,
 				71109F5426EF5CDF0080083C /* Ranking.storyboard in Resources */,
 			);

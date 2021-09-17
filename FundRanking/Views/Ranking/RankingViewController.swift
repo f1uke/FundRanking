@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Lottie
 
 class RankingViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class RankingViewController: UIViewController {
     @IBOutlet weak var monthBtn: UIButton!
     @IBOutlet weak var yearBtn: UIButton!
     @IBOutlet weak var highlightBtnBg: UICustomView!
+    @IBOutlet weak var logoLottie: AnimationView!
+    @IBOutlet weak var notFoundLable: UILabel!
     
     lazy var viewModel: RankingViewModel = {
         return RankingViewModel(onErrorResponse: self.onErrorResponse)
@@ -27,6 +30,7 @@ class RankingViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        playAnimation()
     }
     
     private func setupView() {
@@ -35,6 +39,15 @@ class RankingViewController: UIViewController {
             self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
+    }
+    
+    func playAnimation() {
+        let animation = Animation.named("21192-premium-gold")
+        logoLottie.animation = animation
+        logoLottie.animationSpeed = 1.5
+        logoLottie.contentMode = .scaleAspectFill
+        logoLottie.loopMode = .loop
+        logoLottie.play()
     }
     
     //present error dialog when service error
@@ -132,7 +145,12 @@ class RankingViewController: UIViewController {
 
 extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.tempFundInfos?.count ?? 0
+        if viewModel.tempFundInfos?.count == 0 {
+            notFoundLable.isHidden = false
+        } else {
+            notFoundLable.isHidden = true
+        }
+        return viewModel.tempFundInfos?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

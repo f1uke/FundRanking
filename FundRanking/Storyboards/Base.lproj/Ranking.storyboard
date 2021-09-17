@@ -155,18 +155,18 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMp-FN-zMC" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="8" width="348" height="70"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8Z-L2-aoR" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="K8Z-L2-aoR" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
                                                             <rect key="frame" x="250" y="15" width="80" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-uD-p2G">
-                                                                    <rect key="frame" x="8" y="5.5" width="13.5" height="29"/>
-                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
+                                                                    <rect key="frame" x="6" y="8" width="11.5" height="24.5"/>
+                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="89.60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-1U-Gfj">
-                                                                    <rect key="frame" x="25.5" y="10.5" width="46.5" height="19"/>
-                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="16"/>
+                                                                    <rect key="frame" x="17.5" y="10.5" width="58.5" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -174,13 +174,13 @@
                                                             <color key="backgroundColor" red="0.54754463312835921" green="0.96530182828608246" blue="0.77910391396662892" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="2oc-0g-p75"/>
-                                                                <constraint firstAttribute="trailing" secondItem="eKR-1U-Gfj" secondAttribute="trailing" constant="8" id="DcW-U0-r2r"/>
+                                                                <constraint firstAttribute="trailing" secondItem="eKR-1U-Gfj" secondAttribute="trailing" constant="4" id="DcW-U0-r2r"/>
                                                                 <constraint firstAttribute="width" constant="80" id="JRn-E7-dfv"/>
-                                                                <constraint firstItem="oaN-uD-p2G" firstAttribute="leading" secondItem="K8Z-L2-aoR" secondAttribute="leading" constant="8" id="OOQ-XZ-qkQ"/>
+                                                                <constraint firstItem="oaN-uD-p2G" firstAttribute="leading" secondItem="K8Z-L2-aoR" secondAttribute="leading" constant="6" id="OOQ-XZ-qkQ"/>
                                                                 <constraint firstItem="eKR-1U-Gfj" firstAttribute="top" secondItem="K8Z-L2-aoR" secondAttribute="top" constant="10.5" id="Rsb-4m-Zfk"/>
                                                                 <constraint firstItem="oaN-uD-p2G" firstAttribute="centerY" secondItem="K8Z-L2-aoR" secondAttribute="centerY" id="jNA-On-qeb"/>
                                                                 <constraint firstItem="eKR-1U-Gfj" firstAttribute="centerY" secondItem="K8Z-L2-aoR" secondAttribute="centerY" id="m0v-Fa-fBR"/>
-                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="leading" secondItem="oaN-uD-p2G" secondAttribute="trailing" constant="4" id="ndH-u2-dch"/>
+                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="leading" secondItem="oaN-uD-p2G" secondAttribute="trailing" id="ndH-u2-dch"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -188,15 +188,15 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="PRINCIPAL VNEQ-A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElC-vy-8jW">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="PRINCIPAL VNEQ-A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElC-vy-8jW">
                                                             <rect key="frame" x="18" y="15.5" width="91" height="39"/>
                                                             <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="16"/>
                                                             <color key="textColor" red="0.44959866999999998" green="0.96800953150000002" blue="0.71761530640000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15.1122" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-iK-FLo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="15.1122" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-iK-FLo">
                                                             <rect key="frame" x="117" y="23" width="125" height="24"/>
-                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -212,9 +212,16 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-kO-TfY">
+                                                            <rect key="frame" x="218" y="11.5" width="24" height="12.5"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="top" secondItem="PNr-kO-TfY" secondAttribute="bottom" constant="-1" id="4EW-jv-jcj"/>
                                                         <constraint firstItem="K8Z-L2-aoR" firstAttribute="leading" secondItem="kYP-iK-FLo" secondAttribute="trailing" constant="8" id="5My-yp-uMI"/>
                                                         <constraint firstItem="K8Z-L2-aoR" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="9xC-Kl-JPG"/>
                                                         <constraint firstItem="ElC-vy-8jW" firstAttribute="leading" secondItem="AMp-FN-zMC" secondAttribute="leading" constant="18" id="Fe0-e4-aUd"/>
@@ -225,6 +232,7 @@
                                                         <constraint firstItem="LNw-23-PZR" firstAttribute="trailing" secondItem="a2v-Q7-bef" secondAttribute="leading" constant="-4" id="ZLi-YZ-Wyp"/>
                                                         <constraint firstItem="ElC-vy-8jW" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="d5l-1z-W9n"/>
                                                         <constraint firstItem="kYP-iK-FLo" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="dG0-ri-8j0"/>
+                                                        <constraint firstItem="PNr-kO-TfY" firstAttribute="trailing" secondItem="kYP-iK-FLo" secondAttribute="trailing" id="dZ9-lk-AGn"/>
                                                         <constraint firstItem="kYP-iK-FLo" firstAttribute="top" secondItem="AMp-FN-zMC" secondAttribute="top" constant="23" id="eaU-Bi-F8A"/>
                                                         <constraint firstAttribute="trailing" secondItem="K8Z-L2-aoR" secondAttribute="trailing" constant="18" id="liV-wu-BVO"/>
                                                         <constraint firstItem="kYP-iK-FLo" firstAttribute="leading" secondItem="ElC-vy-8jW" secondAttribute="trailing" constant="8" id="sXu-HY-aPC"/>
@@ -279,8 +287,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="sLp-5I-usK"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-1I-csL">
-                                <rect key="frame" x="131" y="52" width="152.5" height="50"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tns-Ty-eOh" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="214.5" y="37" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Pqf-Us-H3b"/>
+                                    <constraint firstAttribute="height" constant="80" id="rwA-K7-PR3"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-1I-csL">
+                                <rect key="frame" x="120" y="52" width="174.5" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzK-AY-fX4">
                                         <rect key="frame" x="0.0" y="0.0" width="94.5" height="50"/>
@@ -288,15 +304,21 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-Pc-w8g">
-                                        <rect key="frame" x="102.5" y="0.0" width="50" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkw-xj-Z5X">
+                                        <rect key="frame" x="94.5" y="0.0" width="80" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="fyp-ck-X4N"/>
-                                            <constraint firstAttribute="height" constant="50" id="kOR-VK-Svj"/>
+                                            <constraint firstAttribute="width" constant="80" id="daP-de-aVo"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tL-CA-hCg">
+                                <rect key="frame" x="143" y="540" width="128" height="29"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -306,10 +328,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="ATa-n5-Qe0"/>
                             <constraint firstAttribute="bottom" secondItem="xPQ-aP-0wE" secondAttribute="bottom" id="AkA-51-CFV"/>
                             <constraint firstItem="TJE-8M-gSZ" firstAttribute="top" secondItem="J40-tX-vlo" secondAttribute="bottom" constant="8" id="BIk-6c-GyA"/>
+                            <constraint firstItem="tns-Ty-eOh" firstAttribute="centerY" secondItem="2TD-1I-csL" secondAttribute="centerY" id="HVb-1Q-HqB"/>
                             <constraint firstItem="xPQ-aP-0wE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KFB-C7-qxK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kzs-pz-ehc" secondAttribute="trailing" constant="16" id="M7T-W5-bzp"/>
                             <constraint firstItem="Kzs-pz-ehc" firstAttribute="top" secondItem="2TD-1I-csL" secondAttribute="bottom" constant="16" id="PpP-OQ-C7V"/>
+                            <constraint firstItem="tns-Ty-eOh" firstAttribute="centerX" secondItem="Hkw-xj-Z5X" secondAttribute="centerX" id="Snr-Nf-63u"/>
+                            <constraint firstItem="9tL-CA-hCg" firstAttribute="centerY" secondItem="TJE-8M-gSZ" secondAttribute="centerY" id="baV-Go-0a5"/>
                             <constraint firstItem="2TD-1I-csL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="dB0-Kb-8Ec"/>
+                            <constraint firstItem="9tL-CA-hCg" firstAttribute="centerX" secondItem="TJE-8M-gSZ" secondAttribute="centerX" id="eIR-4X-EuY"/>
                             <constraint firstAttribute="bottom" secondItem="TJE-8M-gSZ" secondAttribute="bottom" id="egc-Bd-zoi"/>
                             <constraint firstItem="J40-tX-vlo" firstAttribute="top" secondItem="Kzs-pz-ehc" secondAttribute="bottom" constant="13" id="eyd-Zd-8oj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TJE-8M-gSZ" secondAttribute="trailing" id="fYN-gq-dfb"/>
@@ -324,7 +350,9 @@
                     <connections>
                         <outlet property="dayBtn" destination="XpE-tJ-Fj9" id="zPE-sd-nbo"/>
                         <outlet property="highlightBtnBg" destination="Ht9-i0-d1F" id="Nhi-sM-Oe1"/>
+                        <outlet property="logoLottie" destination="tns-Ty-eOh" id="6N3-KE-9VM"/>
                         <outlet property="monthBtn" destination="4V8-eF-whW" id="9Cj-ui-wBo"/>
+                        <outlet property="notFoundLable" destination="9tL-CA-hCg" id="hrk-BI-sGv"/>
                         <outlet property="searchEdt" destination="kgr-hG-FNA" id="6kP-rc-hHM"/>
                         <outlet property="segmentView" destination="Kzs-pz-ehc" id="XBi-aU-Nbe"/>
                         <outlet property="tableView" destination="TJE-8M-gSZ" id="hGV-S9-8fU"/>
@@ -338,7 +366,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="crown" width="512" height="512"/>
         <image name="crown_cell" width="512" height="512"/>
         <image name="loupe" width="14.5" height="14.5"/>
         <systemColor name="systemBackgroundColor">

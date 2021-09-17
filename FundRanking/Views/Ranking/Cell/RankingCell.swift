@@ -29,7 +29,7 @@ class RankingCell: UITableViewCell {
     func setupView(fundInfo: FundInfo) {
         rank.text = "\(fundInfo.rank ?? 0)"
         name.text = fundInfo.thailandFundCode
-        price.text = String(format: "%.4f", fundInfo.nav!)
+        price.text = String(format: "%.2f", fundInfo.nav!)
         updateDate.text = AppUtils.dateToString(date: fundInfo.navDate!, pattern: .dmy)
         
         if fundInfo.avgReturn! > 0 {
@@ -39,7 +39,7 @@ class RankingCell: UITableViewCell {
             navAvgBG.backgroundColor = #colorLiteral(red: 0.9705815911, green: 0.5238886476, blue: 0.4260551333, alpha: 1)
             plusNavAvg.text = "-"
         }
-        navAvg.text = String(format: "%.2f", abs(fundInfo.avgReturn!))
+        navAvg.text = "\(String(format: "%.2f", abs(fundInfo.avgReturn!)))%"
         
         if fundInfo.rank == 1 {
             crownImage.isHidden = false

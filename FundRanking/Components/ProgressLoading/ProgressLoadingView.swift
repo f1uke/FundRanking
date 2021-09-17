@@ -23,7 +23,7 @@ class ProgressLoadingView: UIView {
         loadXib()
     }
     
-    func loadXib(){
+    func loadXib() {
         Bundle.main.loadNibNamed("ProgressLoading",
                                  owner: self,
                                  options: nil)
@@ -32,7 +32,7 @@ class ProgressLoadingView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    func play(){
+    func play() {
         let animation = Animation.named("57993-win-crown-animation")
         animationView.animation = animation
         animationView.animationSpeed = 1.5
@@ -41,7 +41,7 @@ class ProgressLoadingView: UIView {
         animationView.play()
     }
     
-    func stop(){
+    func stop() {
         animationView.stop()
     }
 
