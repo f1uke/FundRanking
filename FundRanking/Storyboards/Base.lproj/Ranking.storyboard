@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VarelaRound-Regular.ttf">
+            <string>VarelaRound-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Ranking View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RankingViewController" customModule="FundRanking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPQ-aP-0wE" customClass="UIGradientView" customModule="FundRanking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_1stColor">
+                                        <color key="value" red="0.02798029000947019" green="0.178193947703568" blue="0.1095797479555428" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_2ndColor">
+                                        <color key="value" red="0.027980290009999999" green="0.17819394769999999" blue="0.109579748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-pz-ehc">
+                                <rect key="frame" x="11" y="118" width="387" height="34"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht9-i0-d1F" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                        <rect key="frame" x="-4.5" y="-3" width="100" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="7jw-FW-cdj"/>
+                                            <constraint firstAttribute="height" constant="40" id="XHd-UM-Wzh"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aaz-a3-Ans">
+                                        <rect key="frame" x="0.0" y="0.0" width="387" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-tJ-Fj9">
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Day">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="liV-t3-p9l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOi-5z-Qqg">
+                                                <rect key="frame" x="99" y="0.0" width="90.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Week">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="weekPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7kI-Sh-WWC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V8-eF-whW">
+                                                <rect key="frame" x="197.5" y="0.0" width="91" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Month">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="monthPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2G-OY-5Ja"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ww-Ic-T99">
+                                                <rect key="frame" x="296.5" y="0.0" width="90.5" height="34"/>
+                                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                <state key="normal" title="Year">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="yearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBR-BK-J6k"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerX" secondItem="XpE-tJ-Fj9" secondAttribute="centerX" priority="250" id="3Lo-h6-fPC"/>
+                                    <constraint firstItem="aaz-a3-Ans" firstAttribute="top" secondItem="Kzs-pz-ehc" secondAttribute="top" id="HMG-qU-AjS"/>
+                                    <constraint firstAttribute="bottom" secondItem="aaz-a3-Ans" secondAttribute="bottom" id="JIp-oM-RpS"/>
+                                    <constraint firstItem="Ht9-i0-d1F" firstAttribute="centerY" secondItem="aaz-a3-Ans" secondAttribute="centerY" id="QbP-pm-fhi"/>
+                                    <constraint firstAttribute="trailing" secondItem="aaz-a3-Ans" secondAttribute="trailing" id="bcC-M2-JZL"/>
+                                    <constraint firstItem="aaz-a3-Ans" firstAttribute="leading" secondItem="Kzs-pz-ehc" secondAttribute="leading" id="pKk-Pr-30m"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J40-tX-vlo" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                <rect key="frame" x="16" y="165" width="382" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loupe" translatesAutoresizingMaskIntoConstraints="NO" id="SyJ-kf-32t">
+                                        <rect key="frame" x="16" y="13" width="14.5" height="14.5"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kgr-hG-FNA">
+                                        <rect key="frame" x="38.5" y="0.0" width="335.5" height="40"/>
+                                        <color key="tintColor" red="0.44959866999999998" green="0.96800953150000002" blue="0.71761530640000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.44959866999999998" green="0.96800953150000002" blue="0.71761530640000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <action selector="searchEditChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="p6D-dJ-hgm"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kgr-hG-FNA" firstAttribute="centerY" secondItem="J40-tX-vlo" secondAttribute="centerY" id="05j-Al-u4g"/>
+                                    <constraint firstItem="kgr-hG-FNA" firstAttribute="top" secondItem="J40-tX-vlo" secondAttribute="top" id="22x-uF-nKs"/>
+                                    <constraint firstItem="SyJ-kf-32t" firstAttribute="leading" secondItem="J40-tX-vlo" secondAttribute="leading" constant="16" id="27i-rV-4mo"/>
+                                    <constraint firstItem="SyJ-kf-32t" firstAttribute="centerY" secondItem="J40-tX-vlo" secondAttribute="centerY" id="2Cg-fT-fi3"/>
+                                    <constraint firstItem="kgr-hG-FNA" firstAttribute="leading" secondItem="SyJ-kf-32t" secondAttribute="trailing" constant="8" id="VXu-aG-clI"/>
+                                    <constraint firstAttribute="bottom" secondItem="kgr-hG-FNA" secondAttribute="bottom" id="bod-fs-LV1"/>
+                                    <constraint firstAttribute="height" constant="40" id="eLT-8e-BaB"/>
+                                    <constraint firstAttribute="trailing" secondItem="kgr-hG-FNA" secondAttribute="trailing" constant="8" id="xET-w9-Pm9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TJE-8M-gSZ">
+                                <rect key="frame" x="0.0" y="213" width="414" height="683"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RankingCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RankingCell" id="Qce-Dy-Sb1" customClass="RankingCell" customModule="FundRanking" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qce-Dy-Sb1" id="O8M-0P-pHc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMp-FN-zMC" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                                    <rect key="frame" x="50" y="8" width="348" height="70"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="K8Z-L2-aoR" customClass="UICustomView" customModule="FundRanking" customModuleProvider="target">
+                                                            <rect key="frame" x="250" y="15" width="80" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-uD-p2G">
+                                                                    <rect key="frame" x="6" y="8" width="11.5" height="24.5"/>
+                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="89.60" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-1U-Gfj">
+                                                                    <rect key="frame" x="17.5" y="10.5" width="58.5" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="14"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.54754463312835921" green="0.96530182828608246" blue="0.77910391396662892" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="2oc-0g-p75"/>
+                                                                <constraint firstAttribute="trailing" secondItem="eKR-1U-Gfj" secondAttribute="trailing" constant="4" id="DcW-U0-r2r"/>
+                                                                <constraint firstAttribute="width" constant="80" id="JRn-E7-dfv"/>
+                                                                <constraint firstItem="oaN-uD-p2G" firstAttribute="leading" secondItem="K8Z-L2-aoR" secondAttribute="leading" constant="6" id="OOQ-XZ-qkQ"/>
+                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="top" secondItem="K8Z-L2-aoR" secondAttribute="top" constant="10.5" id="Rsb-4m-Zfk"/>
+                                                                <constraint firstItem="oaN-uD-p2G" firstAttribute="centerY" secondItem="K8Z-L2-aoR" secondAttribute="centerY" id="jNA-On-qeb"/>
+                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="centerY" secondItem="K8Z-L2-aoR" secondAttribute="centerY" id="m0v-Fa-fBR"/>
+                                                                <constraint firstItem="eKR-1U-Gfj" firstAttribute="leading" secondItem="oaN-uD-p2G" secondAttribute="trailing" id="ndH-u2-dch"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="PRINCIPAL VNEQ-A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElC-vy-8jW">
+                                                            <rect key="frame" x="18" y="15.5" width="91" height="39"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="16"/>
+                                                            <color key="textColor" red="0.44959866999999998" green="0.96800953150000002" blue="0.71761530640000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="15.1122" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-iK-FLo">
+                                                            <rect key="frame" x="117" y="23" width="125" height="24"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="10 Feb 2014" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-Q7-bef">
+                                                            <rect key="frame" x="253" y="56.5" width="61" height="12.5"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Last Update:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNw-23-PZR">
+                                                            <rect key="frame" x="188.5" y="56.5" width="60.5" height="12.5"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNr-kO-TfY">
+                                                            <rect key="frame" x="218" y="11.5" width="24" height="12.5"/>
+                                                            <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="top" secondItem="PNr-kO-TfY" secondAttribute="bottom" constant="-1" id="4EW-jv-jcj"/>
+                                                        <constraint firstItem="K8Z-L2-aoR" firstAttribute="leading" secondItem="kYP-iK-FLo" secondAttribute="trailing" constant="8" id="5My-yp-uMI"/>
+                                                        <constraint firstItem="K8Z-L2-aoR" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="9xC-Kl-JPG"/>
+                                                        <constraint firstItem="ElC-vy-8jW" firstAttribute="leading" secondItem="AMp-FN-zMC" secondAttribute="leading" constant="18" id="Fe0-e4-aUd"/>
+                                                        <constraint firstItem="LNw-23-PZR" firstAttribute="centerY" secondItem="a2v-Q7-bef" secondAttribute="centerY" id="H2e-0o-wdd"/>
+                                                        <constraint firstAttribute="height" constant="70" id="TOl-zx-l1d"/>
+                                                        <constraint firstAttribute="bottom" secondItem="a2v-Q7-bef" secondAttribute="bottom" constant="1" id="WKI-gI-Ce7"/>
+                                                        <constraint firstItem="a2v-Q7-bef" firstAttribute="trailing" secondItem="K8Z-L2-aoR" secondAttribute="trailing" constant="-16" id="ZGN-Mq-75d"/>
+                                                        <constraint firstItem="LNw-23-PZR" firstAttribute="trailing" secondItem="a2v-Q7-bef" secondAttribute="leading" constant="-4" id="ZLi-YZ-Wyp"/>
+                                                        <constraint firstItem="ElC-vy-8jW" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="d5l-1z-W9n"/>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="centerY" secondItem="AMp-FN-zMC" secondAttribute="centerY" id="dG0-ri-8j0"/>
+                                                        <constraint firstItem="PNr-kO-TfY" firstAttribute="trailing" secondItem="kYP-iK-FLo" secondAttribute="trailing" id="dZ9-lk-AGn"/>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="top" secondItem="AMp-FN-zMC" secondAttribute="top" constant="23" id="eaU-Bi-F8A"/>
+                                                        <constraint firstAttribute="trailing" secondItem="K8Z-L2-aoR" secondAttribute="trailing" constant="18" id="liV-wu-BVO"/>
+                                                        <constraint firstItem="kYP-iK-FLo" firstAttribute="leading" secondItem="ElC-vy-8jW" secondAttribute="trailing" constant="8" id="sXu-HY-aPC"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="35"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-rs-2uf">
+                                                    <rect key="frame" x="10" y="31" width="40" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown_cell" translatesAutoresizingMaskIntoConstraints="NO" id="dym-B0-dfA">
+                                                    <rect key="frame" x="18" y="11" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="77h-a1-cfX"/>
+                                                        <constraint firstAttribute="width" constant="24" id="tDV-QL-jbe"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V7a-rs-2uf" firstAttribute="centerY" secondItem="O8M-0P-pHc" secondAttribute="centerY" id="37n-Oc-FT8"/>
+                                                <constraint firstItem="V7a-rs-2uf" firstAttribute="leading" secondItem="O8M-0P-pHc" secondAttribute="leading" constant="10" id="8kh-u3-kF2"/>
+                                                <constraint firstItem="AMp-FN-zMC" firstAttribute="leading" secondItem="O8M-0P-pHc" secondAttribute="leading" constant="50" id="MIp-m8-yx3"/>
+                                                <constraint firstAttribute="bottom" secondItem="AMp-FN-zMC" secondAttribute="bottom" constant="8" id="PVD-h0-jKk"/>
+                                                <constraint firstItem="AMp-FN-zMC" firstAttribute="leading" secondItem="V7a-rs-2uf" secondAttribute="trailing" id="a2N-eb-Iwl"/>
+                                                <constraint firstAttribute="trailing" secondItem="AMp-FN-zMC" secondAttribute="trailing" constant="16" id="fjG-6I-SMg"/>
+                                                <constraint firstItem="dym-B0-dfA" firstAttribute="centerX" secondItem="V7a-rs-2uf" secondAttribute="centerX" id="fo1-gd-iR9"/>
+                                                <constraint firstItem="AMp-FN-zMC" firstAttribute="top" secondItem="O8M-0P-pHc" secondAttribute="top" constant="8" id="jAU-LD-umE"/>
+                                                <constraint firstItem="V7a-rs-2uf" firstAttribute="top" secondItem="dym-B0-dfA" secondAttribute="bottom" constant="-4" id="w9l-E1-vfZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="crownImage" destination="dym-B0-dfA" id="qXf-9u-Zhr"/>
+                                            <outlet property="name" destination="ElC-vy-8jW" id="3Qo-KB-0VN"/>
+                                            <outlet property="navAvg" destination="eKR-1U-Gfj" id="S8a-Si-DO3"/>
+                                            <outlet property="navAvgBG" destination="K8Z-L2-aoR" id="MQk-jd-VbD"/>
+                                            <outlet property="plusNavAvg" destination="oaN-uD-p2G" id="mG8-Aa-j4c"/>
+                                            <outlet property="price" destination="kYP-iK-FLo" id="WeO-KJ-3cF"/>
+                                            <outlet property="rank" destination="V7a-rs-2uf" id="nhO-Yf-056"/>
+                                            <outlet property="updateDate" destination="a2v-Q7-bef" id="UNI-nQ-HLt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="aVd-pq-T4t"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sLp-5I-usK"/>
+                                </connections>
+                            </tableView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tns-Ty-eOh" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="214.5" y="37" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Pqf-Us-H3b"/>
+                                    <constraint firstAttribute="height" constant="80" id="rwA-K7-PR3"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-1I-csL">
+                                <rect key="frame" x="120" y="52" width="174.5" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzK-AY-fX4">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkw-xj-Z5X">
+                                        <rect key="frame" x="94.5" y="0.0" width="80" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="daP-de-aVo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tL-CA-hCg">
+                                <rect key="frame" x="143" y="540" width="128" height="29"/>
+                                <fontDescription key="fontDescription" name="VarelaRound-Regular" family="Varela Round" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J40-tX-vlo" secondAttribute="trailing" constant="16" id="1VV-2O-jVR"/>
+                            <constraint firstItem="TJE-8M-gSZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Gz-1Q-qoh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="ATa-n5-Qe0"/>
+                            <constraint firstAttribute="bottom" secondItem="xPQ-aP-0wE" secondAttribute="bottom" id="AkA-51-CFV"/>
+                            <constraint firstItem="TJE-8M-gSZ" firstAttribute="top" secondItem="J40-tX-vlo" secondAttribute="bottom" constant="8" id="BIk-6c-GyA"/>
+                            <constraint firstItem="tns-Ty-eOh" firstAttribute="centerY" secondItem="2TD-1I-csL" secondAttribute="centerY" id="HVb-1Q-HqB"/>
+                            <constraint firstItem="xPQ-aP-0wE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KFB-C7-qxK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kzs-pz-ehc" secondAttribute="trailing" constant="16" id="M7T-W5-bzp"/>
+                            <constraint firstItem="Kzs-pz-ehc" firstAttribute="top" secondItem="2TD-1I-csL" secondAttribute="bottom" constant="16" id="PpP-OQ-C7V"/>
+                            <constraint firstItem="tns-Ty-eOh" firstAttribute="centerX" secondItem="Hkw-xj-Z5X" secondAttribute="centerX" id="Snr-Nf-63u"/>
+                            <constraint firstItem="9tL-CA-hCg" firstAttribute="centerY" secondItem="TJE-8M-gSZ" secondAttribute="centerY" id="baV-Go-0a5"/>
+                            <constraint firstItem="2TD-1I-csL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="dB0-Kb-8Ec"/>
+                            <constraint firstItem="9tL-CA-hCg" firstAttribute="centerX" secondItem="TJE-8M-gSZ" secondAttribute="centerX" id="eIR-4X-EuY"/>
+                            <constraint firstAttribute="bottom" secondItem="TJE-8M-gSZ" secondAttribute="bottom" id="egc-Bd-zoi"/>
+                            <constraint firstItem="J40-tX-vlo" firstAttribute="top" secondItem="Kzs-pz-ehc" secondAttribute="bottom" constant="13" id="eyd-Zd-8oj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TJE-8M-gSZ" secondAttribute="trailing" id="fYN-gq-dfb"/>
+                            <constraint firstItem="J40-tX-vlo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gXu-VL-oUC"/>
+                            <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jkK-hi-8zA"/>
+                            <constraint firstItem="xPQ-aP-0wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5t-3g-tDS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPQ-aP-0wE" secondAttribute="trailing" id="pXq-0a-CkI"/>
+                            <constraint firstItem="2TD-1I-csL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vXd-IA-Yh8"/>
+                            <constraint firstItem="Kzs-pz-ehc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="vrP-AY-0iV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dayBtn" destination="XpE-tJ-Fj9" id="zPE-sd-nbo"/>
+                        <outlet property="highlightBtnBg" destination="Ht9-i0-d1F" id="Nhi-sM-Oe1"/>
+                        <outlet property="logoLottie" destination="tns-Ty-eOh" id="6N3-KE-9VM"/>
+                        <outlet property="monthBtn" destination="4V8-eF-whW" id="9Cj-ui-wBo"/>
+                        <outlet property="notFoundLable" destination="9tL-CA-hCg" id="hrk-BI-sGv"/>
+                        <outlet property="searchEdt" destination="kgr-hG-FNA" id="6kP-rc-hHM"/>
+                        <outlet property="segmentView" destination="Kzs-pz-ehc" id="XBi-aU-Nbe"/>
+                        <outlet property="tableView" destination="TJE-8M-gSZ" id="hGV-S9-8fU"/>
+                        <outlet property="weekBtn" destination="eOi-5z-Qqg" id="izv-9W-cFC"/>
+                        <outlet property="yearBtn" destination="9ww-Ic-T99" id="yQz-db-3Pd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="crown_cell" width="512" height="512"/>
+        <image name="loupe" width="14.5" height="14.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
