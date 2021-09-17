@@ -18,9 +18,26 @@ class RankingViewController: UIViewController {
     @IBOutlet weak var yearBtn: UIButton!
     @IBOutlet weak var highlightBtnBg: UICustomView!
     
+    lazy var viewModel: RankingViewModel = {
+        return RankingViewModel(onErrorResponse: self.onErrorResponse)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupView()
+    }
+    
+    private func setupView() {
+        AppUtils.presentLoading()
+        viewModel.getFundRankingDay(onSuccess: {
+            self.tableView.reloadData()
+            AppUtils.dismissLoading()
+        })
+    }
+    
+    private func onErrorResponse(_ message: String){
+        
     }
     
     //change highLightBg position with animation
@@ -57,25 +74,44 @@ class RankingViewController: UIViewController {
     
     @IBAction func dayPressed(_ sender: Any) {
         switchSegment(selected: "day")
+        AppUtils.presentLoading()
+        viewModel.getFundRankingDay(onSuccess: {
+            self.tableView.reloadData()
+            AppUtils.dismissLoading()
+        })
     }
     
     @IBAction func weekPressed(_ sender: Any) {
         switchSegment(selected: "week")
+        AppUtils.presentLoading()
+        viewModel.getFundRankingDay(onSuccess: {
+            self.tableView.reloadData()
+            AppUtils.dismissLoading()
+        })
     }
     
     @IBAction func monthPressed(_ sender: Any) {
         switchSegment(selected: "month")
+        AppUtils.presentLoading()
+        viewModel.getFundRankingDay(onSuccess: {
+            self.tableView.reloadData()
+            AppUtils.dismissLoading()
+        })
     }
     
     @IBAction func yearPressed(_ sender: Any) {
         switchSegment(selected: "year")
         AppUtils.presentLoading()
+        viewModel.getFundRankingDay(onSuccess: {
+            self.tableView.reloadData()
+            AppUtils.dismissLoading()
+        })
     }
 }
 
 extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        viewModel.fundInfos?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

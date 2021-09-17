@@ -35,6 +35,7 @@
 		7140D96C26F366FD00A39D3C /* ProgressLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7140D96A26F366FD00A39D3C /* ProgressLoading.xib */; };
 		7140D96D26F366FD00A39D3C /* ProgressLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */; };
 		7140D97326F4AACA00A39D3C /* FundInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D97226F4AACA00A39D3C /* FundInfo.swift */; };
+		7140D97626F4B3E500A39D3C /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D97526F4B3E500A39D3C /* RankingViewModel.swift */; };
 		71BC3E7026F207460014FB38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71BC3E6F26F207460014FB38 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		7140D96A26F366FD00A39D3C /* ProgressLoading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressLoading.xib; sourceTree = "<group>"; };
 		7140D96B26F366FD00A39D3C /* ProgressLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLoadingView.swift; sourceTree = "<group>"; };
 		7140D97226F4AACA00A39D3C /* FundInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundInfo.swift; sourceTree = "<group>"; };
+		7140D97526F4B3E500A39D3C /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			children = (
 				7140D95626F348B100A39D3C /* Cell */,
 				71109F5026EF5CDF0080083C /* RankingViewController.swift */,
+				7140D97526F4B3E500A39D3C /* RankingViewModel.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				7140D96726F3638900A39D3C /* AppUtils.swift in Sources */,
 				71109FA326F09BF60080083C /* ApiManager.swift in Sources */,
 				71109FA526F09DA90080083C /* GenericResponse.swift in Sources */,
+				7140D97626F4B3E500A39D3C /* RankingViewModel.swift in Sources */,
 				7140D97326F4AACA00A39D3C /* FundInfo.swift in Sources */,
 				71109F9E26F098980080083C /* Repository.swift in Sources */,
 				71109F4D26EF5CDF0080083C /* AppDelegate.swift in Sources */,
