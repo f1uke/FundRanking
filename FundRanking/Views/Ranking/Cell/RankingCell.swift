@@ -29,6 +29,9 @@ class RankingCell: UITableViewCell {
     func setupView(fundInfo: FundInfo) {
         rank.text = "\(fundInfo.rank ?? 0)"
         name.text = fundInfo.thailandFundCode
+        name.adjustsFontSizeToFitWidth = true
+        name.minimumScaleFactor = 0.2
+        name.numberOfLines = 1
         price.text = String(format: "%.2f", fundInfo.nav!)
         updateDate.text = AppUtils.dateToString(date: fundInfo.navDate!, pattern: .dmy)
         
