@@ -69,6 +69,12 @@ class ApiManager<T: Codable> {
                     // self.presentServiceUnavailable()
                     break
                 default:
+                    guard let data = dataResponse.data else {
+                        failureHandler(Messages._serviceError)
+                        return
+                    }
+                    let errorResponse = GenericResponse<String>.toGenericResponse(with: data)
+                    failureHandler(errorResponse?.error ?? Messages._serviceError)
                     print("""
  url: \(url)
  statusCode: \(statusCode)
