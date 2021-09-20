@@ -154,7 +154,7 @@ extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: RankingCell.cellId) as! RankingCell
-        cell.setupView(fundInfo: viewModel.fundInfos![indexPath.row])
+        cell.setupView(fundInfo: viewModel.tempFundInfos![indexPath.row])
         
         return cell
     }
