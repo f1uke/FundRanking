@@ -8,7 +8,7 @@
 - วันที่ 3-7 เริ่ม dev และ test ไปในเวลาเดียวกัน
 
 ซึ่งหากแอพที่ทำขึ้นนำข้อมูลที่ได้จาก API มาแสดงไม่ถูกต้อง ต้องขอภัยมา ณ ที่นี้ด้วย เนื่องจากชื่อตัวแปรนั้นเป็นคำศัพท์เฉพาะทางด้านการเงิน ทำให้ผมอาจเกิดความเข้าใจผิดได้
-หากมีเวลาในการทำมากกว่านี้ ผมก็อยากจะศึกษาและลองเขียน unit test, ui test  ให้โปรเจคนี้ครบสมบูรณ์ขึ้
+หากมีเวลาในการทำมากกว่านี้ ผมก็อยากจะศึกษาและลองเขียน unit test, ui test  ให้โปรเจคนี้ครบสมบูรณ์ขึ้น
 
 #### What was the most useful feature that was added to the latest version of your chosen language? Please       include a snippet of code that shows how you've used it.
 
