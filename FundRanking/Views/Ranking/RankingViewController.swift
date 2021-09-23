@@ -134,6 +134,7 @@ class RankingViewController: UIViewController {
         if searchEdt.text.isNotNilOrEmpty {
             self.viewModel.tempFundInfos = self.viewModel.fundInfos?.filter({
                 $0.thailandFundCode!.uppercased().isCompose(of: searchEdt.text!.uppercased())
+//                $0.thailandFundCode!.uppercased().contains(searchEdt.text!.uppercased())
             })
         }else {
             self.viewModel.tempFundInfos = self.viewModel.fundInfos
