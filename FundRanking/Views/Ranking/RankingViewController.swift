@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 import Lottie
+import RxCocoa
+import RxSwift
 
 class RankingViewController: UIViewController {
 
@@ -25,20 +27,39 @@ class RankingViewController: UIViewController {
     lazy var viewModel: RankingViewModel = {
         return RankingViewModel(onErrorResponse: self.onErrorResponse)
     }()
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         playAnimation()
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        viewModel.tempFundInfos
+            .bind(to: tableView.rx.items) { (tableView, index, element) in
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: RankingCell.cellId) as! RankingCell
+                cell.setupView(fundInfo: element)
+                return cell
+            }.disposed(by: disposeBag)
     }
     
     private func setupView() {
-        AppUtils.presentLoading()
-        viewModel.getFundRankingDay(onSuccess: {
-            self.tableView.reloadData()
-            AppUtils.dismissLoading()
-        })
+        dayPressed(nil)
+        
+        searchEdt.rx.text.orEmpty.subscribe(onNext: { query in
+            if !query.isEmpty {
+                let filttered = self.viewModel.fundInfos?.filter({
+                    $0.thailandFundCode!.uppercased().contains(query.uppercased())
+                })
+                self.viewModel.tempFundInfos.onNext(filttered!)
+            }else {
+                self.viewModel.tempFundInfos.onNext(self.viewModel.fundInfos ?? [])
+            }
+            
+        }).disposed(by: disposeBag)
     }
     
     func playAnimation() {
@@ -95,71 +116,35 @@ class RankingViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func dayPressed(_ sender: Any) {
+    @IBAction func dayPressed(_ sender: Any?) {
         switchSegment(selected: "day")
         AppUtils.presentLoading()
         viewModel.getFundRankingDay(onSuccess: {
-            self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
     }
     
-    @IBAction func weekPressed(_ sender: Any) {
+    @IBAction func weekPressed(_ sender: Any?) {
         switchSegment(selected: "week")
         AppUtils.presentLoading()
         viewModel.getFundRankingWeek(onSuccess: {
-            self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
     }
     
-    @IBAction func monthPressed(_ sender: Any) {
+    @IBAction func monthPressed(_ sender: Any?) {
         switchSegment(selected: "month")
         AppUtils.presentLoading()
         viewModel.getFundRankingMonth(onSuccess: {
-            self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
     }
     
-    @IBAction func yearPressed(_ sender: Any) {
+    @IBAction func yearPressed(_ sender: Any?) {
         switchSegment(selected: "year")
         AppUtils.presentLoading()
         viewModel.getFundRankingYear(onSuccess: {
-            self.tableView.reloadData()
             AppUtils.dismissLoading()
         })
     }
-    @IBAction func searchEditChanged(_ sender: Any) {
-        if searchEdt.text.isNotNilOrEmpty {
-            self.viewModel.tempFundInfos = self.viewModel.fundInfos?.filter({
-                $0.thailandFundCode!.uppercased().isCompose(of: searchEdt.text!.uppercased())
-//                $0.thailandFundCode!.uppercased().contains(searchEdt.text!.uppercased())
-            })
-        }else {
-            self.viewModel.tempFundInfos = self.viewModel.fundInfos
-        }
-        tableView.reloadData()
-    }
 }
-
-extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.tempFundInfos?.count == 0 {
-            notFoundLable.isHidden = false
-        } else {
-            notFoundLable.isHidden = true
-        }
-        return viewModel.tempFundInfos?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: RankingCell.cellId) as! RankingCell
-        cell.setupView(fundInfo: viewModel.tempFundInfos![indexPath.row])
-        
-        return cell
-    }
-    
-    
-}
-

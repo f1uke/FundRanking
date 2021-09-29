@@ -38,6 +38,8 @@
 		7140D97626F4B3E500A39D3C /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D97526F4B3E500A39D3C /* RankingViewModel.swift */; };
 		7140D97826F4CE2D00A39D3C /* 21192-premium-gold.json in Resources */ = {isa = PBXBuildFile; fileRef = 7140D97726F4CE2D00A39D3C /* 21192-premium-gold.json */; };
 		7140D97C26F4FB4900A39D3C /* DialogErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7140D97B26F4FB4900A39D3C /* DialogErrorViewController.swift */; };
+		71984EBB26FC700D0060DFA9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 71984EBA26FC700D0060DFA9 /* RxCocoa */; };
+		71984EBD26FC700D0060DFA9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 71984EBC26FC700D0060DFA9 /* RxSwift */; };
 		71BC3E7026F207460014FB38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 71BC3E6F26F207460014FB38 /* SnapKit */; };
 		71C6CD0026F4FCC200E92104 /* 4698-wrong-answer.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C6CCFF26F4FCC200E92104 /* 4698-wrong-answer.json */; };
 		71C6CD0126F4FF2100E92104 /* 4698-wrong-answer.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C6CCFF26F4FCC200E92104 /* 4698-wrong-answer.json */; };
@@ -109,6 +111,8 @@
 			files = (
 				71109F9026F092630080083C /* Alamofire in Frameworks */,
 				71BC3E7026F207460014FB38 /* SnapKit in Frameworks */,
+				71984EBD26FC700D0060DFA9 /* RxSwift in Frameworks */,
+				71984EBB26FC700D0060DFA9 /* RxCocoa in Frameworks */,
 				7140D95C26F35E3700A39D3C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +372,8 @@
 				71109F8F26F092630080083C /* Alamofire */,
 				71BC3E6F26F207460014FB38 /* SnapKit */,
 				7140D95B26F35E3700A39D3C /* Lottie */,
+				71984EBA26FC700D0060DFA9 /* RxCocoa */,
+				71984EBC26FC700D0060DFA9 /* RxSwift */,
 			);
 			productName = FundRanking;
 			productReference = 71109F4926EF5CDF0080083C /* FundRanking.app */;
@@ -444,6 +450,7 @@
 				71109F8E26F092620080083C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				71BC3E6E26F207460014FB38 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7140D95A26F35E3700A39D3C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				71984EB926FC700D0060DFA9 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 71109F4A26EF5CDF0080083C /* Products */;
 			projectDirPath = "";
@@ -863,6 +870,14 @@
 				minimumVersion = 3.2.3;
 			};
 		};
+		71984EB926FC700D0060DFA9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
 		71BC3E6E26F207460014FB38 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -883,6 +898,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7140D95A26F35E3700A39D3C /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		71984EBA26FC700D0060DFA9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71984EB926FC700D0060DFA9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		71984EBC26FC700D0060DFA9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71984EB926FC700D0060DFA9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 		71BC3E6F26F207460014FB38 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

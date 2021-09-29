@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class RankingViewModel {
     
@@ -16,13 +18,13 @@ class RankingViewModel {
     let onErrorResponse: ((String) -> Void)?
     
     var fundInfos: [FundInfo]?
-    var tempFundInfos: [FundInfo]?
+    var tempFundInfos = PublishSubject<[FundInfo]>()
     
     func getFundRankingDay(onSuccess: ( () -> Void )?) {
         Repository.getFundRankingDay(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
-            self.tempFundInfos = sortedData
+            self.tempFundInfos.onNext(sortedData)
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
@@ -31,7 +33,7 @@ class RankingViewModel {
         Repository.getFundRankingWeek(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
-            self.tempFundInfos = sortedData
+            self.tempFundInfos.onNext(sortedData)
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
@@ -40,7 +42,7 @@ class RankingViewModel {
         Repository.getFundRankingMonth(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
-            self.tempFundInfos = sortedData
+            self.tempFundInfos.onNext(sortedData)
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
@@ -49,7 +51,7 @@ class RankingViewModel {
         Repository.getFundRankingYear(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
-            self.tempFundInfos = sortedData
+            self.tempFundInfos.onNext(sortedData)
             onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
