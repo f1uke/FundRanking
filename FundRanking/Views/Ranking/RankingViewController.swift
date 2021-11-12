@@ -25,8 +25,10 @@ class RankingViewController: UIViewController {
     @IBOutlet weak var notFoundLable: UILabel!
     
     lazy var viewModel: RankingViewModel = {
-        return RankingViewModel(onErrorResponse: self.onErrorResponse)
+        return RankingViewModel(onErrorResponse: self.onErrorResponse,
+                                onSuccess: self.onSuccess)
     }()
+    
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -78,6 +80,10 @@ class RankingViewController: UIViewController {
         self.present(errorDialog, animated: true)
     }
     
+    private func onSuccess() {
+        AppUtils.dismissLoading()
+    }
+    
     //change highLightBg position with animation
     //use snapKit to make it easy to change constraints
     private func switchSegment(selected: String) {
@@ -119,32 +125,24 @@ class RankingViewController: UIViewController {
     @IBAction func dayPressed(_ sender: Any?) {
         switchSegment(selected: "day")
         AppUtils.presentLoading()
-        viewModel.getFundRankingDay(onSuccess: {
-            AppUtils.dismissLoading()
-        })
+        viewModel.getFundRankingDay()
     }
     
     @IBAction func weekPressed(_ sender: Any?) {
         switchSegment(selected: "week")
         AppUtils.presentLoading()
-        viewModel.getFundRankingWeek(onSuccess: {
-            AppUtils.dismissLoading()
-        })
+        viewModel.getFundRankingWeek()
     }
     
     @IBAction func monthPressed(_ sender: Any?) {
         switchSegment(selected: "month")
         AppUtils.presentLoading()
-        viewModel.getFundRankingMonth(onSuccess: {
-            AppUtils.dismissLoading()
-        })
+        viewModel.getFundRankingMonth()
     }
     
     @IBAction func yearPressed(_ sender: Any?) {
         switchSegment(selected: "year")
         AppUtils.presentLoading()
-        viewModel.getFundRankingYear(onSuccess: {
-            AppUtils.dismissLoading()
-        })
+        viewModel.getFundRankingYear()
     }
 }

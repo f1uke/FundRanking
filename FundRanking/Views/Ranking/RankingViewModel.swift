@@ -11,48 +11,51 @@ import RxCocoa
 
 class RankingViewModel {
     
-    init(onErrorResponse: ((String) -> Void)?) {
+    init(onErrorResponse: ((String) -> Void)?,
+         onSuccess: (() -> Void)? ) {
         self.onErrorResponse = onErrorResponse
+        self.onSuccess = onSuccess
     }
     
     let onErrorResponse: ((String) -> Void)?
+    let onSuccess: (() -> Void)?
     
     var fundInfos: [FundInfo]?
     var tempFundInfos = PublishSubject<[FundInfo]>()
     
-    func getFundRankingDay(onSuccess: ( () -> Void )?) {
+    func getFundRankingDay() {
         Repository.getFundRankingDay(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
             self.tempFundInfos.onNext(sortedData)
-            onSuccess?()
+            self.onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
     
-    func getFundRankingWeek(onSuccess: ( () -> Void )?) {
+    func getFundRankingWeek() {
         Repository.getFundRankingWeek(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
             self.tempFundInfos.onNext(sortedData)
-            onSuccess?()
+            self.onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
     
-    func getFundRankingMonth(onSuccess: ( () -> Void )?) {
+    func getFundRankingMonth() {
         Repository.getFundRankingMonth(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
             self.tempFundInfos.onNext(sortedData)
-            onSuccess?()
+            self.onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
     
-    func getFundRankingYear(onSuccess: ( () -> Void )?) {
+    func getFundRankingYear() {
         Repository.getFundRankingYear(onComplete: { datas in
             let sortedData = self.sortRanking(datas)
             self.fundInfos = sortedData
             self.tempFundInfos.onNext(sortedData)
-            onSuccess?()
+            self.onSuccess?()
         }, onFailure: self.onErrorResponse)
     }
     
